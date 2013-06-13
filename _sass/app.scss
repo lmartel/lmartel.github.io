@@ -1,0 +1,48 @@
+// -*- sass -*-
+//
+// ZURB Foundation
+//
+
+@import "_settings";
+@import "compass/css3";
+@import "foundation/settings";
+@import "foundation/functions/all";
+
+// Responsive layout
+
+@import "foundation/mixins/clearfix";
+@import "foundation/mixins/css-triangle";
+@import "foundation/mixins/respond-to";
+@import "foundation/mixins/semantic-grid";
+@import "foundation/components/grid";
+
+// Core Styles
+
+@import "modular-scale";
+@import "foundation/common/globals";
+@import "foundation/common/typography";
+@import "foundation/components/modules/topbar";
+
+//
+// Site-specific code below.
+//
+body {
+  background-image: url("../image/mooning_@2X.png");
+}
+
+.name h1 { 
+  font-family: "Audiowide", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+h6 {
+  color: #8C75CD;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.33);
+  margin-top: 25px;
+  padding-left: 17px;
+  padding-right: 17px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
