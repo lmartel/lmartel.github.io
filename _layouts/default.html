@@ -30,8 +30,8 @@
         </section>
       </nav>
     </div>
-    <div class='content row'>
-      <div class='twelve-columns'>
+    <div class='row'>
+      <div class='twelve-columns content'>
         {% if page.title %}
         <h1>{{ page.title }}</h1>
         {% endif %}
@@ -40,6 +40,7 @@
         {% endif %}
         {{ content }}
       </div>
+      <div class='content-background'></div>
     </div>
     <footer>
       <div class='row'>

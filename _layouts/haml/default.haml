@@ -24,7 +24,7 @@
                         %li
                             %a{:href => "{{ site.url }}/about/"} About
         .row
-            .twelve-columns
+            .twelve-columns.content
                 {% if page.title %}
                 %h1 {{ page.title }}
                 {% endif %}
@@ -35,6 +35,8 @@
                 {% endif %}
 
                 {{ content }}
+
+            .content-background
 
         %footer
             .row

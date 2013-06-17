@@ -3,13 +3,26 @@
     <title>lpm.io</title>
     <link href="http://localhost:4000/"/>
     <link type="application/atom+xml" rel="self" href="http://localhost:4000/atom.xml"/>
-    <updated>2013-06-13T04:33:41-07:00</updated>
+    <updated>2013-06-16T23:30:59-07:00</updated>
     <id>http://localhost:4000</id>
     <author>
         <name>Leo Martel</name>
         <email>leo@lpm.io</email>
     </author>
 
+    
+    <entry>
+        <id>http://localhost:4000/2013/01/01/other-post</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/2013/01/01/other-post/"/>
+        <title>Other Post</title>
+        <updated>2013-01-01T00:00:00-08:00</updated>
+        <author>
+            <name>Leo Martel</name>
+            <uri>http://localhost:4000/</uri>
+        </author>
+        <content type="html">&lt;p&gt;HELLO WORLD&lt;/p&gt;
+</content>
+    </entry>
     
     <entry>
         <id>http://localhost:4000/2012/10/19/sample-post</id>
