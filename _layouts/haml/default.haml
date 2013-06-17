@@ -11,6 +11,7 @@
         {% endif %}
 
         %link{:rel => "stylesheet", :href => "{{ site.url }}/asset/css/app.css" }
+        %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Audiowide" }
         %link{:rel => "alternate",  :href => "{{ site.url }}/atom.xml", :type => "application/atom+xml",  :title => "Sitewide ATOM Feed"}
     %body
         .contain-to-grid
@@ -22,7 +23,17 @@
                 %section
                     %ul.right
                         %li
-                            %a{:href => "{{ site.url }}/about/"} About
+                            %a{:href => "{{ site.url }}/"} HOME
+                        %li
+                            %a{:href => "{{ site.url }}/about/"} ABOUT
+                        %li
+                            %a{:href => "{{ site.url }}/projects/"} PROJECTS
+                        %li
+                            %a{:href => "{{ site.url }}/resume/"} RESUME
+                        %li
+                            %a{:href => "{{ site.url }}/contact/"} CONTACT
+
+
         .row
             .twelve-columns.content
                 {% if page.title %}
