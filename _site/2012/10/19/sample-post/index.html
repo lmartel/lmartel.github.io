@@ -7,33 +7,45 @@
     <title>Sample Post - lpm.io</title>
     
     <link href='http://localhost:4000/asset/css/app.css' rel='stylesheet' />
+    <link href='http://localhost:4000/asset/css/orbit-1.2.3.css' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' />
     <link href='http://localhost:4000/atom.xml' rel='alternate' title='Sitewide ATOM Feed' type='application/atom+xml' />
+    <link href='http://localhost:4000/asset/javascripts/vendor/custom.modernizr.js' rel='javascript' />
   </head>
   <body>
-    <div class='contain-to-grid'>
+    <div class='contain-to-grid fixed'>
       <nav class='top-bar'>
-        <ul>
+        <ul class='title-area'>
           <li class='name'>
             <h1>
               <a href='http://localhost:4000'>lpm.io</a>
             </h1>
           </li>
+          <li class='toggle-topbar menu-icon'>
+            <a href='#'>
+              <span></span>
+            </a>
+          </li>
         </ul>
-        <section>
+        <section class='top-bar-section'>
           <ul class='right'>
+            <li class='divider'></li>
             <li>
               <a href='http://localhost:4000/'>HOME</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='http://localhost:4000/about/'>ABOUT</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='http://localhost:4000/projects/'>PROJECTS</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='http://localhost:4000/resume/'>RESUME</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='http://localhost:4000/contact/'>CONTACT</a>
             </li>
@@ -68,6 +80,11 @@ sit amet nisl. Donec vel tellus et lacus iaculis luctus. Proin tempus
 venenatis lorem sagittis vulputate. Morbi non arcu tortor. In hac habitasse
 platea dictumst.</p>
 
+        <div id='featured'>
+          <img alt='caption 1' src='http://foundation.zurb.com/docs/img/demos/demo1.jpg' />
+          <img alt='caption 2' src='http://foundation.zurb.com/docs/img/demos/demo2.jpg' />
+          <img alt='caption 3' src='http://foundation.zurb.com/docs/img/demos/demo3.jpg' />
+        </div>
       </div>
       <div class='content-background'></div>
     </div>
@@ -76,5 +93,11 @@ platea dictumst.</p>
         <div class='twelve-columns'>&copy; 2013 Leo Martel. All rights reserved.</div>
       </div>
     </footer>
+    <script src='http://localhost:4000/asset/javascripts/vendor/custom.modernizr.js'></script>
+    <script src='http://localhost:4000/asset/javascripts/vendor/jquery.js'></script>
+    <script src='http://localhost:4000/asset/javascripts/vendor/jquery.orbit-1.2.3.min.js'></script>
+    <script type='text/javascript'>
+      $(window).load(function() { $('#featured').orbit(); });
+    </script>
   </body>
 </html>

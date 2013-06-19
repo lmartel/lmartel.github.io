@@ -9,33 +9,45 @@
     <title>{{ site.title }}</title>
     {% endif %}
     <link href='{{ site.url }}/asset/css/app.css' rel='stylesheet' />
+    <link href='{{ site.url }}/asset/css/orbit-1.2.3.css' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' />
     <link href='{{ site.url }}/atom.xml' rel='alternate' title='Sitewide ATOM Feed' type='application/atom+xml' />
+    <link href='{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js' rel='javascript' />
   </head>
   <body>
-    <div class='contain-to-grid'>
+    <div class='contain-to-grid fixed'>
       <nav class='top-bar'>
-        <ul>
+        <ul class='title-area'>
           <li class='name'>
             <h1>
               <a href='{{ site.url }}'>{{ site.title }}</a>
             </h1>
           </li>
+          <li class='toggle-topbar menu-icon'>
+            <a href='#'>
+              <span></span>
+            </a>
+          </li>
         </ul>
-        <section>
+        <section class='top-bar-section'>
           <ul class='right'>
+            <li class='divider'></li>
             <li>
               <a href='{{ site.url }}/'>HOME</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='{{ site.url }}/about/'>ABOUT</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='{{ site.url }}/projects/'>PROJECTS</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='{{ site.url }}/resume/'>RESUME</a>
             </li>
+            <li class='divider'></li>
             <li>
               <a href='{{ site.url }}/contact/'>CONTACT</a>
             </li>
@@ -52,6 +64,11 @@
         <img alt='Header' src='{{ site.url }}/asset/image/header/{{ page.header }}' />
         {% endif %}
         {{ content }}
+        <div id='featured'>
+          <img alt='caption 1' src='http://foundation.zurb.com/docs/img/demos/demo1.jpg' />
+          <img alt='caption 2' src='http://foundation.zurb.com/docs/img/demos/demo2.jpg' />
+          <img alt='caption 3' src='http://foundation.zurb.com/docs/img/demos/demo3.jpg' />
+        </div>
       </div>
       <div class='content-background'></div>
     </div>
@@ -60,5 +77,11 @@
         <div class='twelve-columns'>&copy; 2013 {{ site.author }}. All rights reserved.</div>
       </div>
     </footer>
+    <script src='{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js'></script>
+    <script src='{{ site.url }}/asset/javascripts/vendor/jquery.js'></script>
+    <script src='{{ site.url }}/asset/javascripts/vendor/jquery.orbit-1.2.3.min.js'></script>
+    <script type='text/javascript'>
+      $(window).load(function() { $('#featured').orbit(); });
+    </script>
   </body>
 </html>

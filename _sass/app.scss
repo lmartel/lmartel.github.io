@@ -26,6 +26,9 @@
 //
 // Site-specific code below.
 //
+
+.orbit-wrapper { width: 100% !important; height: 350px !important; }
+
 body {
   background-image: url("../image/mooning_@2X.png");
 }
@@ -63,3 +66,4 @@ hr {
 footer {
   display: none !important;
 }
+

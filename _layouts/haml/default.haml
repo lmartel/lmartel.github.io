@@ -11,25 +11,36 @@
         {% endif %}
 
         %link{:rel => "stylesheet", :href => "{{ site.url }}/asset/css/app.css" }
+        %link{:rel => "stylesheet", :href => "{{ site.url }}/asset/css/orbit-1.2.3.css" }
         %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Audiowide" }
         %link{:rel => "alternate",  :href => "{{ site.url }}/atom.xml", :type => "application/atom+xml",  :title => "Sitewide ATOM Feed"}
+        %link{:rel => "javascript", :href => "{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js"}
     %body
-        .contain-to-grid
+        .contain-to-grid.fixed
             %nav.top-bar
-                %ul
+                %ul.title-area
                     %li.name
                         %h1
                             %a{:href => "{{ site.url }}"} {{ site.title }}
-                %section
+                    %li.toggle-topbar.menu-icon
+                        %a{:href => "#"}
+                            %span
+
+                %section.top-bar-section
                     %ul.right
+                        %li.divider
                         %li
                             %a{:href => "{{ site.url }}/"} HOME
+                        %li.divider
                         %li
                             %a{:href => "{{ site.url }}/about/"} ABOUT
+                        %li.divider
                         %li
                             %a{:href => "{{ site.url }}/projects/"} PROJECTS
+                        %li.divider
                         %li
                             %a{:href => "{{ site.url }}/resume/"} RESUME
+                        %li.divider
                         %li
                             %a{:href => "{{ site.url }}/contact/"} CONTACT
 
@@ -47,8 +58,38 @@
 
                 {{ content }}
 
+                %div{:id => "featured"}
+                    %img{:src => "http://foundation.zurb.com/docs/img/demos/demo1.jpg", :alt => "caption 1"}
+                    
+                    %img{:src => "http://foundation.zurb.com/docs/img/demos/demo2.jpg", :alt => "caption 2"}
+                    
+                    %img{:src => "http://foundation.zurb.com/docs/img/demos/demo3.jpg", :alt => "caption 3"}
+                    
+
+
             .content-background
 
         %footer
             .row
                 .twelve-columns &copy; 2013 {{ site.author }}. All rights reserved.
+
+        %script{:src => "{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js"}
+
+        %script{:src => "{{ site.url }}/asset/javascripts/vendor/jquery.js"}
+        
+        %script{:src => "{{ site.url }}/asset/javascripts/vendor/jquery.orbit-1.2.3.min.js"}
+
+        %script{:type => "text/javascript"}
+            $(window).load(function() { $('#featured').orbit(); });
+
+        -#
+            %script{:type => "text/javascript"}
+                document.write('<script src={{ site.url }}/asset/javascripts/vendor/' + ('__proto__' in {} && false ? 'zepto' : 'jquery') + '.js><\/script>');
+
+            %script{:src => "{{ site.url }}/asset/javascripts/foundation/foundation.js"}
+
+            - ["alerts", "clearing", "cookie", "dropdown", "forms", "interchange", "joyride", "magellan", "orbit", "placeholder", "reveal", "section", "tooltips", "topbar"].each do |file|
+                %script{:src => "{{ site.url }}/asset/javascripts/foundation/foundation.#{ file }.js"}
+
+            %script{:type => "text/javascript"}
+                $(document).foundation();
