@@ -27,20 +27,24 @@
 // Site-specific code below.
 //
 
-.orbit-wrapper { width: 100% !important; height: 350px !important; }
-
+//General styles
 body {
   background-image: url("../image/mooning_@2X.png");
   margin-top: 45px;
 }
 
+.top-bar h1, .top-bar, .parallelogram p { 
+  font-family: "Audiowide", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.twelve-columns {
+  position: relative;
+}
+
+//Navbar styles
 .top-bar .title-area .name h1 a {
   font-size: 41px !important;
   margin-top: 1px;
-}
-
-.top-bar h1, .top-bar, .parallelogram p { 
-  font-family: "Audiowide", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 .top-bar ul:not(.title-area) {
@@ -138,4 +142,16 @@ footer {
       -webkit-transform: skew(65deg) rotate(-25deg);
     }
   }
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  //width: 195px;
+  width: 202px;
+  height: 202px;
+  border: 1px solid #2A2A2A;
+  background-image: url("../image/me.jpg");
+  background-size: 100%;
 }
