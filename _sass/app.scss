@@ -31,14 +31,52 @@
 
 body {
   background-image: url("../image/mooning_@2X.png");
+  margin-top: 45px;
 }
 
-.top-bar h1, .top-bar { 
+.top-bar .title-area .name h1 a {
+  font-size: 41px !important;
+  margin-top: 1px;
+}
+
+.top-bar h1, .top-bar, .parallelogram p { 
   font-family: "Audiowide", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
+.top-bar ul:not(.title-area) {
+
+  li a {
+    border: solid #4ecdc4;
+    border-width: 0 0 0 1px;
+    //margin-left: -1px;
+  }
+
+  li:last-child a {
+    border-width: 0 1px;
+  }
+
+  li.selected {
+
+    //background: #040404;
+    background: #4ecdc4;
+
+    a {
+      //color: #288d86;
+      color: #2A2A2A;
+      border-bottom-color: #703D84;
+      border-width: 0 0 8px;
+    }
+
+    + li a { //since navbar items share borders we need to turn off the one to the right
+        border-width: 0;
+    }
+
+  }
+
+}
+
 h6 {
-  color: #8C75CD;
+  color: #703D84;
 }
 
 hr {
@@ -67,3 +105,37 @@ footer {
   display: none !important;
 }
 
+.parallelogram-wrapper {
+
+  border: 1px solid #2A2A2A;
+  background: #4ecdc4;
+  margin-right: 220px;
+  padding-left: 15px;
+  margin-top: 25px;
+
+  .parallelogram{
+    border: 30px #703D84 solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+
+    margin-left: 200px;
+    width:300px;
+    height:200px;
+    background: #2A2A2A;
+    transform: skew(-65deg);
+    -o-transform: skew(-65deg);
+    -moz-transform: skew(-65deg);
+    -webkit-transform: skew(-65deg);
+
+    p {
+      color: #4ecdc4;
+      font-size: 50px;
+      margin-left: -100px;
+      padding-top: 30px;
+      transform: skew(65deg) rotate(-25deg);
+      -o-transform: skew(65deg) rotate(-25deg);
+      -moz-transform: skew(65deg) rotate(-25deg);
+      -webkit-transform: skew(65deg) rotate(-25deg);
+    }
+  }
+}

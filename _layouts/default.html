@@ -31,25 +31,20 @@
         </ul>
         <section class='top-bar-section'>
           <ul class='right'>
-            <li class='divider'></li>
             <li>
-              <a href='{{ site.url }}/'>HOME</a>
+              <a href='{{ site.url }}/' id='home'>HOME</a>
             </li>
-            <li class='divider'></li>
             <li>
-              <a href='{{ site.url }}/about/'>ABOUT</a>
+              <a href='{{ site.url }}/about/' id='about'>ABOUT</a>
             </li>
-            <li class='divider'></li>
             <li>
-              <a href='{{ site.url }}/projects/'>PROJECTS</a>
+              <a href='{{ site.url }}/projects/' id='projects'>PROJECTS</a>
             </li>
-            <li class='divider'></li>
             <li>
-              <a href='{{ site.url }}/resume/'>RESUME</a>
+              <a href='{{ site.url }}/resume/' id='resume'>RESUME</a>
             </li>
-            <li class='divider'></li>
             <li>
-              <a href='{{ site.url }}/contact/'>CONTACT</a>
+              <a href='{{ site.url }}/contact/' id='contact'>CONTACT</a>
             </li>
           </ul>
         </section>
@@ -57,6 +52,13 @@
     </div>
     <div class='row'>
       <div class='twelve-columns content'>
+        <div class='parallelogram-wrapper'>
+          <div class='parallelogram'>
+            <p>
+              {{ page.title }}
+            </p>
+          </div>
+        </div>
         {% if page.title %}
         <h1>{{ page.title }}</h1>
         {% endif %}
@@ -64,11 +66,6 @@
         <img alt='Header' src='{{ site.url }}/asset/image/header/{{ page.header }}' />
         {% endif %}
         {{ content }}
-        <div id='featured'>
-          <img alt='caption 1' src='http://foundation.zurb.com/docs/img/demos/demo1.jpg' />
-          <img alt='caption 2' src='http://foundation.zurb.com/docs/img/demos/demo2.jpg' />
-          <img alt='caption 3' src='http://foundation.zurb.com/docs/img/demos/demo3.jpg' />
-        </div>
       </div>
       <div class='content-background'></div>
     </div>
@@ -79,9 +76,6 @@
     </footer>
     <script src='{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js'></script>
     <script src='{{ site.url }}/asset/javascripts/vendor/jquery.js'></script>
-    <script src='{{ site.url }}/asset/javascripts/vendor/jquery.orbit-1.2.3.min.js'></script>
-    <script type='text/javascript'>
-      $(window).load(function() { $('#featured').orbit(); });
-    </script>
+    <script src='{{ site.url }}/asset/javascripts/app.js'></script>
   </body>
 </html>
