@@ -1,0 +1,37 @@
+//Navbar styles
+.top-bar .title-area .name h1 a {
+  font-size: 41px !important;
+  margin-top: 1px;
+}
+
+.top-bar ul:not(.title-area) {
+
+  li a {
+    border: solid #4ecdc4;
+    border-width: 0 0 0 1px;
+    //margin-left: -1px;
+  }
+
+  li:last-child a {
+    border-width: 0 1px;
+  }
+
+  li.selected {
+
+    //background: #040404;
+    background: #4ecdc4;
+
+    a {
+      //color: #288d86;
+      color: #2A2A2A;
+      border-bottom-color: #703D84;
+      border-width: 0 0 8px;
+    }
+
+    + li a { //since navbar items share borders we need to turn off the one to the right
+        border-width: 0;
+    }
+
+  }
+
+}

@@ -1,0 +1,12 @@
+---
+layout: default
+title: BLOG
+---
+
+{% for post in site.posts limit:5 %}
+{{ post.content }}
+{% unless forloop.last %}
+%br
+%hr
+{% endunless %}
+{% endfor %}
