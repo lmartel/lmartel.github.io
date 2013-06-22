@@ -14,7 +14,7 @@
         %link{:rel => "stylesheet", :href => "{{ site.url }}/asset/css/orbit-1.2.3.css" }
         %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Audiowide" }
         %link{:rel => "alternate",  :href => "{{ site.url }}/atom.xml", :type => "application/atom+xml",  :title => "Sitewide ATOM Feed"}
-        %link{:rel => "javascript", :href => "{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js"}
+        %link{:rel => "javascript", :href => "{{ site.url }}/asset/javascript/vendor/custom.modernizr.js"}
     %body
         .contain-to-grid.fixed
             %nav.top-bar
@@ -29,15 +29,26 @@
                 %section.top-bar-section
                     %ul.right
                         %li
-                            %a{:href => "{{ site.url }}/", :id => "home"} HOME
+                            %a{:href => "{{ site.url }}/", :id => "nav-home"}
+                                HOME
                         %li
-                            %a{:href => "{{ site.url }}/about/", :id => "about"} ABOUT
+                            %a{:href => "{{ site.url }}/about/", :id => "nav-about"}
+                                ABOUT
                         %li
-                            %a{:href => "{{ site.url }}/projects/", :id => "projects"} PROJECTS
+                            %a{:href => "{{ site.url }}/blog/", :id => "nav-blog"}
+                                BLOG
                         %li
-                            %a{:href => "{{ site.url }}/resume/", :id => "resume"} RESUME
+                            %a{:href => "{{ site.url }}/projects/", :id => "nav-projects"}
+                                PROJECTS
                         %li
-                            %a{:href => "{{ site.url }}/contact/", :id => "contact"} CONTACT
+                            %a{:href => "{{ site.url }}/resume/", :id => "nav-resume"}
+                                RESUME
+                        %li
+                            %a{:href => "{{ site.url }}/contact/", :id => "nav-contact"}
+                                CONTACT
+
+                %a{:href => "http://github.com/lmartel"}
+                    .github-link
 
 
         .row
@@ -45,14 +56,10 @@
 
                 .parallelogram-wrapper
                     .parallelogram
-                        %p
+                        %p{:class => "title {{ page.title | replace: '.', '' | replace: ' ', '' | downcase }}"}
                             {{ page.title }}
 
                 .hero
-                            
-                {% if page.title %}
-                %h1 {{ page.title }}
-                {% endif %}
 
 
                 {% if page.header %}
@@ -64,12 +71,9 @@
 
             .content-background
 
-        %footer
-            .row
-                .twelve-columns &copy; 2013 {{ site.author }}. All rights reserved.
+        / Check for Zepto support, load jQuery if necessary
+        %script
+            document.write('<script src=/asset/javascript/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
 
-        %script{:src => "{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js"}
 
-        %script{:src => "{{ site.url }}/asset/javascripts/vendor/jquery.js"}
-
-        %script{:src => "{{ site.url }}/asset/javascripts/app.js"}
+        %script{:src => "{{ site.url }}/asset/javascript/app.js"}

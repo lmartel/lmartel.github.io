@@ -12,7 +12,7 @@
     <link href='{{ site.url }}/asset/css/orbit-1.2.3.css' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' />
     <link href='{{ site.url }}/atom.xml' rel='alternate' title='Sitewide ATOM Feed' type='application/atom+xml' />
-    <link href='{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js' rel='javascript' />
+    <link href='{{ site.url }}/asset/javascript/vendor/custom.modernizr.js' rel='javascript' />
   </head>
   <body>
     <div class='contain-to-grid fixed'>
@@ -32,37 +32,52 @@
         <section class='top-bar-section'>
           <ul class='right'>
             <li>
-              <a href='{{ site.url }}/' id='home'>HOME</a>
+              <a href='{{ site.url }}/' id='nav-home'>
+                HOME
+              </a>
             </li>
             <li>
-              <a href='{{ site.url }}/about/' id='about'>ABOUT</a>
+              <a href='{{ site.url }}/about/' id='nav-about'>
+                ABOUT
+              </a>
             </li>
             <li>
-              <a href='{{ site.url }}/projects/' id='projects'>PROJECTS</a>
+              <a href='{{ site.url }}/blog/' id='nav-blog'>
+                BLOG
+              </a>
             </li>
             <li>
-              <a href='{{ site.url }}/resume/' id='resume'>RESUME</a>
+              <a href='{{ site.url }}/projects/' id='nav-projects'>
+                PROJECTS
+              </a>
             </li>
             <li>
-              <a href='{{ site.url }}/contact/' id='contact'>CONTACT</a>
+              <a href='{{ site.url }}/resume/' id='nav-resume'>
+                RESUME
+              </a>
+            </li>
+            <li>
+              <a href='{{ site.url }}/contact/' id='nav-contact'>
+                CONTACT
+              </a>
             </li>
           </ul>
         </section>
+        <a href='http://github.com/lmartel'>
+          <div class='github-link'></div>
+        </a>
       </nav>
     </div>
     <div class='row'>
       <div class='twelve-columns content'>
         <div class='parallelogram-wrapper'>
           <div class='parallelogram'>
-            <p>
+            <p class="title {{ page.title | replace: '.', '' | replace: ' ', '' | downcase }}">
               {{ page.title }}
             </p>
           </div>
         </div>
         <div class='hero'></div>
-        {% if page.title %}
-        <h1>{{ page.title }}</h1>
-        {% endif %}
         {% if page.header %}
         <img alt='Header' src='{{ site.url }}/asset/image/header/{{ page.header }}' />
         {% endif %}
@@ -70,13 +85,10 @@
       </div>
       <div class='content-background'></div>
     </div>
-    <footer>
-      <div class='row'>
-        <div class='twelve-columns'>&copy; 2013 {{ site.author }}. All rights reserved.</div>
-      </div>
-    </footer>
-    <script src='{{ site.url }}/asset/javascripts/vendor/custom.modernizr.js'></script>
-    <script src='{{ site.url }}/asset/javascripts/vendor/jquery.js'></script>
-    <script src='{{ site.url }}/asset/javascripts/app.js'></script>
+    <!-- Check for Zepto support, load jQuery if necessary -->
+    <script>
+      document.write('<script src=/asset/javascript/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+    </script>
+    <script src='{{ site.url }}/asset/javascript/app.js'></script>
   </body>
 </html>
