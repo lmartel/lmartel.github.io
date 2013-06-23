@@ -11,7 +11,7 @@
         {% endif %}
 
         %link{:rel => "stylesheet", :href => "{{ site.url }}/asset/css/app.css" }
-        %link{:rel => "stylesheet", :href => "{{ site.url }}/asset/css/orbit-1.2.3.css" }
+        %link{:rel => "stylesheet", :href => "{{ site.url }}/asset/css/vendor/jquery.bxslider.css" }
         %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Audiowide" }
         %link{:rel => "alternate",  :href => "{{ site.url }}/atom.xml", :type => "application/atom+xml",  :title => "Sitewide ATOM Feed"}
         %link{:rel => "javascript", :href => "{{ site.url }}/asset/javascript/vendor/custom.modernizr.js"}
@@ -46,9 +46,9 @@
                         %li
                             %a{:href => "{{ site.url }}/contact/", :id => "nav-contact"}
                                 CONTACT
-
-                %a{:href => "http://github.com/lmartel"}
-                    .github-link
+                        %li
+                            %a{:href => "http://github.com/lmartel", :id => "nav-github"}
+                                .github-link
 
 
         .row
@@ -70,10 +70,10 @@
 
 
             .content-background
+        
 
-        / Check for Zepto support, load jQuery if necessary
-        %script
-            document.write('<script src=/asset/javascript/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+        %script{:src => "/asset/javascript/vendor/jquery.js"}
 
+        %script{:src => "/asset/javascript/vendor/jquery-bxslider-min.js"}
 
-        %script{:src => "{{ site.url }}/asset/javascript/app.js"}
+        %script{:src => "/asset/javascript/app.js"}

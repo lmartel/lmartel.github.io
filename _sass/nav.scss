@@ -34,4 +34,18 @@
 
   }
 
+  #nav-github {
+    padding-top: 7px;
+
+    &:hover {
+      background: #703D84;
+    }
+
+    .github-link {
+      height: 32px;
+      width: 32px;
+      background-image: url("../image/GitHub-Mark-120px-plus.png");
+      background-size: 100%;
+    }
+  }
 }

@@ -7,7 +7,7 @@
     <title>PROJECTS - Lpm.io</title>
     
     <link href='http://localhost:4000/asset/css/app.css' rel='stylesheet' />
-    <link href='http://localhost:4000/asset/css/orbit-1.2.3.css' rel='stylesheet' />
+    <link href='http://localhost:4000/asset/css/vendor/jquery.bxslider.css' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' />
     <link href='http://localhost:4000/atom.xml' rel='alternate' title='Sitewide ATOM Feed' type='application/atom+xml' />
     <link href='http://localhost:4000/asset/javascript/vendor/custom.modernizr.js' rel='javascript' />
@@ -59,11 +59,13 @@
                 CONTACT
               </a>
             </li>
+            <li>
+              <a href='http://github.com/lmartel' id='nav-github'>
+                <div class='github-link'></div>
+              </a>
+            </li>
           </ul>
         </section>
-        <a href='http://github.com/lmartel'>
-          <div class='github-link'></div>
-        </a>
       </nav>
     </div>
     <div class='row'>
@@ -77,15 +79,172 @@
         </div>
         <div class='hero'></div>
         
-        HELLO WORLD
+        <div class='project-headers'>
+  <div class='project-description selected'>
+    <h2>
+      <a href='http://tvtracker.herokuapp.com'>
+        TVTracker
+      </a>
+      (
+      <a href='http://github.com/lmartel/TVTracker'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Spring 2013
+      </h4>
+      <h4 class='project-status'>
+        v1 finished. <a href="/contact">I'd love feedback</a> for v2!
+      </h4>
+    </h2>
+  </div>
+  <div class='project-description'>
+    <h2>
+      <a href='http://harmonics.herokuapp.com'>
+        The Stanford Harmonics
+      </a>
+      (
+      <a href='http://github.com/lmartel/harmonics'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Winter 2012/13
+      </h4>
+      <h4 class='project-status'>
+        backend finished, design/frontend in progress
+      </h4>
+    </h2>
+  </div>
+  <div class='project-description'>
+    <h2>
+      Snake Cube Solver
+      (
+      <a href='http://github.com/lmartel/SnakeCubeSolver'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Winter 2012/13
+      </h4>
+      <h4 class='project-status'>
+        finished
+      </h4>
+    </h2>
+  </div>
+  <div class='project-description'>
+    <h2>
+      This Website
+      (
+      <a href='http://github.com/lmartel/lmartel.github.io'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Summer 2013
+      </h4>
+      <h4 class='project-status'>
+        finished if you're reading this
+      </h4>
+    </h2>
+  </div>
+</div>
+<ul class='bxslider'>
+  <li>
+    <img src="/asset/image/tvtracker.png" />
+  </li>
+  <li>
+    <img src="/asset/image/harmonics.png" />
+  </li>
+  <li>
+    <img src="/asset/image/snakecubesolver.png" />
+  </li>
+  <li>
+    <img src="/asset/image/this.png" />
+  </li>
+</ul>
+<div class='project-bodies'>
+  <div class='project-description selected'>
+    <p>
+      Can you never remember quite where you stopped after binging a season and a half of Arrested Development in one night? Want one page that lists the dates and times that all your favorite shows will air their next episode? Then TVTracker is the app for you!
+    </p>
+    <p>
+      A solo hackathon project that I decided to keep working on, this web app can dynamically find and load data on pretty much any TV show you've ever heard of. You can browse cast lists, airdates and more, as well as track your progress as you watch episodes. There's some snazzy animations involved too,
+      <a href='http://tvtracker.herokuapp.com'>
+        check it out!
+      </a>
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        Web app built with Ruby on Rails
+      </li>
+      <li>
+        Uses two REST APIs (TVRage and OMDB, if you're curious) to scrape TV show data
+      </li>
+      <li>
+        Animations built with JavaScript and jQuery
+      </li>
+    </ul>
+  </div>
+  <div class='project-description'>
+    <p>
+      I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="http://harmonics.herokuapp.com">Check it out!</a>
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        Built on top of a Content Management System (Refinery) to allow GUI editing of static webpage content
+      </li>
+      <li>
+        Uses Ruby on Rails
+      </li>
+    </ul>
+  </div>
+  <div class='project-description'>
+    <p>
+      This is a solution I wrote for a recruiting problem involving <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cubes</a>. Given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations.
+    </p>
+    <p>
+      This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway: <a href="http://github.com/lmartel/SnakeCubeSolver">check out the code here</a> instead.
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        Built with Java
+      </li>
+      <li>
+        Basically a recursive algorithm with some error checking and fluff
+      </li>
+    </ul>
+  </div>
+  <div class='project-description'>
+    <p>
+      What, too meta?
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        Static site (that's HTML/CSS/JS)
+      </li>
+      <li>
+        Built with Jekyll
+      </li>
+      <li>
+        Templating with HAML, Liquid, and Markdown
+      </li>
+      <li>
+        Deployment tools: Compass, Foreman
+      </li>
+    </ul>
+  </div>
+</div>
 
       </div>
       <div class='content-background'></div>
     </div>
-    <!-- Check for Zepto support, load jQuery if necessary -->
-    <script>
-      document.write('<script src=/asset/javascript/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
-    </script>
-    <script src='http://localhost:4000/asset/javascript/app.js'></script>
+    <script src='/asset/javascript/vendor/jquery.js'></script>
+    <script src='/asset/javascript/vendor/jquery-bxslider-min.js'></script>
+    <script src='/asset/javascript/app.js'></script>
   </body>
 </html>

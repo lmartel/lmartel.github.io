@@ -1,0 +1,35 @@
+
+
+.project-description {
+  position: relative;
+
+  h2 {
+    text-align: center;
+    color: #2A2A2A;
+    margin-bottom: 17px;
+  }
+
+  h4 {
+    color: #703D84;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 17px;
+  }
+
+  .project-date {
+    //float: left;
+  }
+
+  .project-status {
+    color: #2A2A2A;
+  }
+
+  li {
+    margin-left: 50px;
+  }
+
+}
+
+.project-description:not(.selected){
+  display:none;
+}

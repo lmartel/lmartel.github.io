@@ -2,4 +2,114 @@
 layout: default
 title: PROJECTS
 ---
-HELLO WORLD
+.project-headers
+    .project-description.selected
+        %h2
+            %a{:href => "http://tvtracker.herokuapp.com"}
+                TVTracker 
+            (
+            %a{:href => "http://github.com/lmartel/TVTracker"}
+                code
+            )
+            %h4.project-date
+                Spring 2013
+            %h4.project-status
+                v1 finished. <a href="/contact">I'd love feedback</a> for v2!
+    .project-description
+        %h2
+            %a{:href => "http://harmonics.herokuapp.com"}
+                The Stanford Harmonics 
+            (
+            %a{:href => "http://github.com/lmartel/harmonics"}
+                code
+            )
+            %h4.project-date
+                Winter 2012/13
+            %h4.project-status
+                backend finished, design/frontend in progress
+    .project-description
+        %h2
+            Snake Cube Solver
+            (
+            %a{:href => "http://github.com/lmartel/SnakeCubeSolver"}
+                code
+            )
+            %h4.project-date
+                Winter 2012/13
+            %h4.project-status
+                finished
+    .project-description
+        %h2
+            This Website
+            (
+            %a{:href => "http://github.com/lmartel/lmartel.github.io"}
+                code
+            )
+            %h4.project-date
+                Summer 2013
+            %h4.project-status
+                finished if you're reading this
+    
+%ul{:class => "bxslider"}
+    %li
+        <img src="/asset/image/tvtracker.png" />
+    %li
+        <img src="/asset/image/harmonics.png" />
+    %li
+        <img src="/asset/image/snakecubesolver.png" />
+    %li
+        <img src="/asset/image/this.png" />
+
+.project-bodies
+    .project-description.selected
+        %p
+            Can you never remember quite where you stopped after binging a season and a half of Arrested Development in one night? Want one page that lists the dates and times that all your favorite shows will air their next episode? Then TVTracker is the app for you!
+
+        %p
+            A solo hackathon project that I decided to keep working on, this web app can dynamically find and load data on pretty much any TV show you've ever heard of. You can browse cast lists, airdates and more, as well as track your progress as you watch episodes. There's some snazzy animations involved too, 
+            %a{:href => "http://tvtracker.herokuapp.com"}
+                check it out!
+        Tech stuff:
+        %ul
+            %li
+                Web app built with Ruby on Rails
+            %li
+                Uses two REST APIs (TVRage and OMDB, if you're curious) to scrape TV show data
+            %li
+                Animations built with JavaScript and jQuery
+
+    .project-description
+        %p
+            I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="http://harmonics.herokuapp.com">Check it out!</a>
+
+        Tech stuff:
+        %ul
+            %li
+                Built on top of a Content Management System (Refinery) to allow GUI editing of static webpage content
+            %li
+                Uses Ruby on Rails
+    .project-description
+        %p
+            This is a solution I wrote for a recruiting problem involving <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cubes</a>. Given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations. 
+
+        %p
+            This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway: <a href="http://github.com/lmartel/SnakeCubeSolver">check out the code here</a> instead.
+        Tech stuff:
+        %ul
+            %li
+                Built with Java
+            %li
+                Basically a recursive algorithm with some error checking and fluff
+    .project-description
+        %p
+            What, too meta?
+        Tech stuff:
+        %ul
+            %li
+                Static site (that's HTML/CSS/JS)
+            %li
+                Built with Jekyll
+            %li
+                Templating with HAML, Liquid, and Markdown
+            %li
+                Deployment tools: Compass, Foreman

@@ -7,7 +7,7 @@
     <title>CONTACT - Lpm.io</title>
     
     <link href='http://localhost:4000/asset/css/app.css' rel='stylesheet' />
-    <link href='http://localhost:4000/asset/css/orbit-1.2.3.css' rel='stylesheet' />
+    <link href='http://localhost:4000/asset/css/vendor/jquery.bxslider.css' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' />
     <link href='http://localhost:4000/atom.xml' rel='alternate' title='Sitewide ATOM Feed' type='application/atom+xml' />
     <link href='http://localhost:4000/asset/javascript/vendor/custom.modernizr.js' rel='javascript' />
@@ -59,11 +59,13 @@
                 CONTACT
               </a>
             </li>
+            <li>
+              <a href='http://github.com/lmartel' id='nav-github'>
+                <div class='github-link'></div>
+              </a>
+            </li>
           </ul>
         </section>
-        <a href='http://github.com/lmartel'>
-          <div class='github-link'></div>
-        </a>
       </nav>
     </div>
     <div class='row'>
@@ -82,10 +84,8 @@
       </div>
       <div class='content-background'></div>
     </div>
-    <!-- Check for Zepto support, load jQuery if necessary -->
-    <script>
-      document.write('<script src=/asset/javascript/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
-    </script>
-    <script src='http://localhost:4000/asset/javascript/app.js'></script>
+    <script src='/asset/javascript/vendor/jquery.js'></script>
+    <script src='/asset/javascript/vendor/jquery-bxslider-min.js'></script>
+    <script src='/asset/javascript/app.js'></script>
   </body>
 </html>

@@ -8,6 +8,7 @@ body {
   min-height: 100%;
   background-image: url("../image/mooning_@2X.png");
   padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .content-background {
@@ -29,14 +30,4 @@ body {
 
 .content, footer .twelve-columns {
   margin: 0 25px;
-}
-
-.github-link {
-  position: fixed;
-  right: 7px;
-  top: 7px;
-  height: 32px;
-  width: 32px;
-  background-image: url("../image/GitHub-Mark-120px-plus.png");
-  background-size: 100%;
 }
