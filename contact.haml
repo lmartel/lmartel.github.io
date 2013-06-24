@@ -2,4 +2,17 @@
 layout: default
 title: CONTACT
 ---
-HELLO WORLD
+%h2.contact-header
+    Say hi at <a href="mailto:{{ site.author_email }}">{{ site.author_email }}</a>. 
+
+%h4.contact-header
+    You can also find me on <a href="{{ site.github_url}}">GitHub</a>.
+%h6.contact-header
+    I'm even on <a href="{{ site.linkedin_url }}">LinkedIn</a> if that's really your thing.
+
+%p
+    Send me some feedback on my projects or my website, hire me, or just say hello; I love making Internet Friends*!
+
+%p
+    %em
+        *unless you're creepy

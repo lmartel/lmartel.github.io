@@ -27,9 +27,14 @@
 // Site-specific code below.
 //
 
+// Global styling
 @import "site";
 @import "nav";
 @import "header";
+
+// Page-specific styling
+@import "home";
 @import "blog";
 @import "resume";
 @import "projects";
+@import "contact";

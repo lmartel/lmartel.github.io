@@ -5,10 +5,10 @@ title: RESUME
 .resume-date
     Last updated 
     %span{:class => "resume-date-value"}
-        January 21, 2013
+        {{ site.resume_date }}
 
 .resume-download
-    %a{:href => "https://dl.dropboxusercontent.com/u/84750930/lmartel_resume.pdf"}
+    %a{:href => "{{ site.resume_url }}"}
         Download (right click > "Save As")
 
-%iframe{:src => "https://dl.dropboxusercontent.com/u/84750930/lmartel_resume.pdf", :class => "resume-iframe"}
+%iframe{:src => "{{ site.resume_url }}", :class => "resume-iframe"}

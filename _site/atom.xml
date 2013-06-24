@@ -3,7 +3,7 @@
     <title>Lpm.io</title>
     <link href="http://localhost:4000/"/>
     <link type="application/atom+xml" rel="self" href="http://localhost:4000/atom.xml"/>
-    <updated>2013-06-23T05:28:20-07:00</updated>
+    <updated>2013-06-23T22:39:11-07:00</updated>
     <id>http://localhost:4000</id>
     <author>
         <name>Leo Martel</name>
@@ -12,17 +12,17 @@
 
     
     <entry>
-        <id>http://localhost:4000/blog/sample-post-2</id>
-        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/sample-2/"/>
+        <id>http://localhost:4000/blog/today</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/today/"/>
         <title>BLOG</title>
-        <updated>2013-06-21T00:00:00-07:00</updated>
+        <updated>2013-06-23T00:00:00-07:00</updated>
         <author>
             <name>Leo Martel</name>
             <uri>http://localhost:4000/</uri>
         </author>
         <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
-&lt;a href=&quot;/blog/sample-2/&quot;&gt;
-Sample Post 2
+&lt;a href=&quot;/blog/today/&quot;&gt;
+Today
 &lt;/a&gt;
 &lt;/h2&gt;
 
@@ -36,35 +36,26 @@ Leo
 
 
 &lt;h6 class=&quot;blog-date&quot;&gt;
-Friday June 21, 2013
+Sunday June 23, 2013
 &lt;/h6&gt;
 
 
-&lt;p&gt;Integer lacus lorem, interdum vel pharetra eu, elementum non enim. Fusce
-dictum euismod magna, ut interdum elit suscipit ut. Sed molestie faucibus
-sollicitudin. Sed vel quam dui, ac interdum enim. Proin mi sapien, faucibus id
-pharetra ut, ornare quis leo. Phasellus sit amet orci in magna hendrerit
-convallis ullamcorper ac metus. Aenean posuere nisi sed ante semper a euismod
-ante rhoncus. Donec at dui eros, at varius eros. Proin molestie, ipsum sed
-vehicula volutpat, turpis tortor sollicitudin dui, vitae convallis enim risus
-sit amet nisl. Donec vel tellus et lacus iaculis luctus. Proin tempus
-venenatis lorem sagittis vulputate. Morbi non arcu tortor. In hac habitasse
-platea dictumst.&lt;/p&gt;
+&lt;p&gt;...is not that day.&lt;/p&gt;
 </content>
     </entry>
     
     <entry>
-        <id>http://localhost:4000/blog/sample-post</id>
-        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/sample/"/>
+        <id>http://localhost:4000/blog/i-have-a-blog</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/i-have-a-blog/"/>
         <title>BLOG</title>
-        <updated>2013-06-21T00:00:00-07:00</updated>
+        <updated>2013-06-22T00:00:00-07:00</updated>
         <author>
             <name>Leo Martel</name>
             <uri>http://localhost:4000/</uri>
         </author>
         <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
-&lt;a href=&quot;/blog/sample/&quot;&gt;
-Sample Post
+&lt;a href=&quot;/blog/i-have-a-blog/&quot;&gt;
+I have a blog!
 &lt;/a&gt;
 &lt;/h2&gt;
 
@@ -78,19 +69,13 @@ Leo
 
 
 &lt;h6 class=&quot;blog-date&quot;&gt;
-Friday June 21, 2013
+Saturday June 22, 2013
 &lt;/h6&gt;
 
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra
-mollis fringilla. Mauris sapien urna, cursus luctus consequat at, varius ut
-ipsum. Etiam neque diam, consectetur et pellentesque et, vulputate in est.
-Curabitur sed erat risus. Lorem ipsum dolor sit amet, consectetur adipiscing
-elit. Praesent ullamcorper eros non lorem venenatis quis ultricies diam
-tincidunt. Duis vestibulum luctus diam vel mattis. Aliquam in massa et tortor
-sodales placerat vel eu mi. Integer tincidunt lectus id lacus fermentum
-sodales. Vestibulum posuere ante vitae risus pharetra sit amet porttitor elit
-dapibus.&lt;/p&gt;
+&lt;p&gt;Yep, this is a blog alright.&lt;/p&gt;
+
+&lt;p&gt;Maybe someday I'll put something on it.&lt;/p&gt;
 </content>
     </entry>
     

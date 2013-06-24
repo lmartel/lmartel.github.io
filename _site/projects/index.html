@@ -35,11 +35,6 @@
               </a>
             </li>
             <li>
-              <a href='http://localhost:4000/about/' id='nav-about'>
-                ABOUT
-              </a>
-            </li>
-            <li>
               <a href='http://localhost:4000/blog/' id='nav-blog'>
                 BLOG
               </a>
@@ -80,7 +75,7 @@
         <div class='hero'></div>
         
         <div class='project-headers'>
-  <div class='project-description selected'>
+  <div class='project-description' data-project='tvtracker'>
     <h2>
       <a href='http://tvtracker.herokuapp.com'>
         TVTracker
@@ -98,7 +93,7 @@
       </h4>
     </h2>
   </div>
-  <div class='project-description'>
+  <div class='project-description' data-project='harmonics'>
     <h2>
       <a href='http://harmonics.herokuapp.com'>
         The Stanford Harmonics
@@ -116,7 +111,7 @@
       </h4>
     </h2>
   </div>
-  <div class='project-description'>
+  <div class='project-description' data-project='snakecubesolver'>
     <h2>
       Snake Cube Solver
       (
@@ -132,7 +127,7 @@
       </h4>
     </h2>
   </div>
-  <div class='project-description'>
+  <div class='project-description' data-project='this'>
     <h2>
       This Website
       (
@@ -151,20 +146,20 @@
 </div>
 <ul class='bxslider'>
   <li>
-    <img src="/asset/image/tvtracker.png" />
+    <img src='/asset/image/tvtracker.png' />
   </li>
   <li>
-    <img src="/asset/image/harmonics.png" />
+    <img src='/asset/image/harmonics.png' />
   </li>
   <li>
-    <img src="/asset/image/snakecubesolver.png" />
+    <img src='/asset/image/snakecubesolver.png' />
   </li>
   <li>
-    <img src="/asset/image/this.png" />
+    <img src='/asset/image/this.png' />
   </li>
 </ul>
 <div class='project-bodies'>
-  <div class='project-description selected'>
+  <div class='project-description' data-project='tvtracker'>
     <p>
       Can you never remember quite where you stopped after binging a season and a half of Arrested Development in one night? Want one page that lists the dates and times that all your favorite shows will air their next episode? Then TVTracker is the app for you!
     </p>
@@ -187,26 +182,29 @@
       </li>
     </ul>
   </div>
-  <div class='project-description'>
+  <div class='project-description' data-project='harmonics'>
     <p>
       I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="http://harmonics.herokuapp.com">Check it out!</a>
     </p>
     Tech stuff:
     <ul>
       <li>
+        Core built with Ruby on Rails
+      </li>
+      <li>
         Built on top of a Content Management System (Refinery) to allow GUI editing of static webpage content
       </li>
       <li>
-        Uses Ruby on Rails
+        Uses Refinery Engines (small rails apps nested inside the root app) for managing the more complex models
       </li>
     </ul>
   </div>
-  <div class='project-description'>
+  <div class='project-description' data-project='snakecubesolver'>
     <p>
       This is a solution I wrote for a recruiting problem involving <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cubes</a>. Given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations.
     </p>
     <p>
-      This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway: <a href="http://github.com/lmartel/SnakeCubeSolver">check out the code here</a> instead.
+      This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway; <a href="http://github.com/lmartel/SnakeCubeSolver">check out the code here</a> instead.
     </p>
     Tech stuff:
     <ul>
@@ -218,9 +216,9 @@
       </li>
     </ul>
   </div>
-  <div class='project-description'>
+  <div class='project-description' data-project='this'>
     <p>
-      What, too meta?
+      What, <a href="#this">too meta?</a>
     </p>
     Tech stuff:
     <ul>
@@ -231,10 +229,10 @@
         Built with Jekyll
       </li>
       <li>
-        Templating with HAML, Liquid, and Markdown
+        Markup and templating: HAML, Liquid, and Markdown
       </li>
       <li>
-        Deployment tools: Compass, Foreman
+        Development and compilation tools: Compass, Foreman
       </li>
     </ul>
   </div>

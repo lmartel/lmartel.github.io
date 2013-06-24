@@ -3,46 +3,46 @@ layout: default
 title: PROJECTS
 ---
 .project-headers
-    .project-description.selected
+    .project-description{:data => {:project => "tvtracker"} }
         %h2
-            %a{:href => "http://tvtracker.herokuapp.com"}
+            %a{:href => "{{ site.tvtracker_url }}"}
                 TVTracker 
             (
-            %a{:href => "http://github.com/lmartel/TVTracker"}
+            %a{:href => "{{ site.github_url }}/TVTracker"}
                 code
             )
             %h4.project-date
                 Spring 2013
             %h4.project-status
                 v1 finished. <a href="/contact">I'd love feedback</a> for v2!
-    .project-description
+    .project-description{:data => {:project => "harmonics"} }
         %h2
-            %a{:href => "http://harmonics.herokuapp.com"}
+            %a{:href => "{{ site.harmonics_url }}"}
                 The Stanford Harmonics 
             (
-            %a{:href => "http://github.com/lmartel/harmonics"}
+            %a{:href => "{{ site.github_url }}/harmonics"}
                 code
             )
             %h4.project-date
                 Winter 2012/13
             %h4.project-status
                 backend finished, design/frontend in progress
-    .project-description
+    .project-description{:data => {:project => "snakecubesolver"} }
         %h2
             Snake Cube Solver
             (
-            %a{:href => "http://github.com/lmartel/SnakeCubeSolver"}
+            %a{:href => "{{ site.github_url }}/SnakeCubeSolver"}
                 code
             )
             %h4.project-date
                 Winter 2012/13
             %h4.project-status
                 finished
-    .project-description
+    .project-description{:data => {:project => "this"} }
         %h2
             This Website
             (
-            %a{:href => "http://github.com/lmartel/lmartel.github.io"}
+            %a{:href => "{{ site.github_url }}/lmartel.github.io"}
                 code
             )
             %h4.project-date
@@ -52,22 +52,22 @@ title: PROJECTS
     
 %ul{:class => "bxslider"}
     %li
-        <img src="/asset/image/tvtracker.png" />
+        %img{:src => "/asset/image/tvtracker.png"}
     %li
-        <img src="/asset/image/harmonics.png" />
+        %img{:src => "/asset/image/harmonics.png"}
     %li
-        <img src="/asset/image/snakecubesolver.png" />
+        %img{:src => "/asset/image/snakecubesolver.png"}
     %li
-        <img src="/asset/image/this.png" />
+        %img{:src => "/asset/image/this.png"}
 
 .project-bodies
-    .project-description.selected
+    .project-description{:data => {:project => "tvtracker"} }
         %p
             Can you never remember quite where you stopped after binging a season and a half of Arrested Development in one night? Want one page that lists the dates and times that all your favorite shows will air their next episode? Then TVTracker is the app for you!
 
         %p
             A solo hackathon project that I decided to keep working on, this web app can dynamically find and load data on pretty much any TV show you've ever heard of. You can browse cast lists, airdates and more, as well as track your progress as you watch episodes. There's some snazzy animations involved too, 
-            %a{:href => "http://tvtracker.herokuapp.com"}
+            %a{:href => "{{ site.tvtracker_url }}"}
                 check it out!
         Tech stuff:
         %ul
@@ -78,31 +78,34 @@ title: PROJECTS
             %li
                 Animations built with JavaScript and jQuery
 
-    .project-description
+    .project-description{:data => {:project => "harmonics"} }
         %p
-            I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="http://harmonics.herokuapp.com">Check it out!</a>
+            I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="{{ site.harmonics_url }}">Check it out!</a>
 
         Tech stuff:
         %ul
             %li
+                Core built with Ruby on Rails
+            %li
                 Built on top of a Content Management System (Refinery) to allow GUI editing of static webpage content
             %li
-                Uses Ruby on Rails
-    .project-description
+                Uses Refinery Engines (small rails apps nested inside the root app) for managing the more complex models
+            
+    .project-description{:data => {:project => "snakecubesolver"} }
         %p
             This is a solution I wrote for a recruiting problem involving <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cubes</a>. Given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations. 
 
         %p
-            This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway: <a href="http://github.com/lmartel/SnakeCubeSolver">check out the code here</a> instead.
+            This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway; <a href="{{ site.github_url }}/SnakeCubeSolver">check out the code here</a> instead.
         Tech stuff:
         %ul
             %li
                 Built with Java
             %li
                 Basically a recursive algorithm with some error checking and fluff
-    .project-description
+    .project-description{:data => {:project => "this"} }
         %p
-            What, too meta?
+            What, <a href="#this">too meta?</a>
         Tech stuff:
         %ul
             %li
@@ -110,6 +113,6 @@ title: PROJECTS
             %li
                 Built with Jekyll
             %li
-                Templating with HAML, Liquid, and Markdown
+                Markup and templating: HAML, Liquid, and Markdown
             %li
-                Deployment tools: Compass, Foreman
+                Development and compilation tools: Compass, Foreman
