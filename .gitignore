@@ -1,2 +1,4 @@
 # ignore sass-cache
 /.sass-cache
+# ignore compiled site; handled by master deployment branch
+/_site
