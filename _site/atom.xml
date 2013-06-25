@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Lpm.io</title>
+    <link href="http://localhost:4000/"/>
+    <link type="application/atom+xml" rel="self" href="http://localhost:4000/atom.xml"/>
+    <updated>2013-06-24T23:55:52-07:00</updated>
+    <id>http://localhost:4000</id>
+    <author>
+        <name>Leo Martel</name>
+        <email>leo@lpm.io</email>
+    </author>
+
+    
+    <entry>
+        <id>http://localhost:4000/blog/today</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/today/"/>
+        <title>BLOG</title>
+        <updated>2013-06-23T00:00:00-07:00</updated>
+        <author>
+            <name>Leo Martel</name>
+            <uri>http://localhost:4000/</uri>
+        </author>
+        <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
+&lt;a href=&quot;/blog/today/&quot;&gt;
+Today
+&lt;/a&gt;
+&lt;/h2&gt;
+
+
+&lt;h5 class=&quot;blog-byline&quot;&gt;
+Leo
+&lt;/h5&gt;
+
+
+&lt;br&gt;
+
+
+&lt;h6 class=&quot;blog-date&quot;&gt;
+Sunday June 23, 2013
+&lt;/h6&gt;
+
+
+&lt;p&gt;...is not that day.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <id>http://localhost:4000/blog/i-have-a-blog</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/i-have-a-blog/"/>
+        <title>BLOG</title>
+        <updated>2013-06-22T00:00:00-07:00</updated>
+        <author>
+            <name>Leo Martel</name>
+            <uri>http://localhost:4000/</uri>
+        </author>
+        <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
+&lt;a href=&quot;/blog/i-have-a-blog/&quot;&gt;
+I have a blog!
+&lt;/a&gt;
+&lt;/h2&gt;
+
+
+&lt;h5 class=&quot;blog-byline&quot;&gt;
+Leo
+&lt;/h5&gt;
+
+
+&lt;br&gt;
+
+
+&lt;h6 class=&quot;blog-date&quot;&gt;
+Saturday June 22, 2013
+&lt;/h6&gt;
+
+
+&lt;p&gt;Yep, this is a blog alright.&lt;/p&gt;
+
+&lt;p&gt;Maybe someday I'll put something on it.&lt;/p&gt;
+</content>
+    </entry>
+    
+</feed>
