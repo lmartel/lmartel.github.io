@@ -18,6 +18,7 @@
   padding-left: 15px;
   margin-top: 25px;
   margin-bottom: 25px;
+  min-width: 730px; // ensures the background stays as large as the parallelogram
 
   .parallelogram{
     border: 30px #703D84 solid;
