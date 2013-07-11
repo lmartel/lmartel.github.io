@@ -76,9 +76,45 @@
         <div class='hero'></div>
         
         <div class='project-headers'>
+  <div class='project-description' data-project='hexmoney'>
+    <h2>
+      <a href='http://lpm.io/HexMoney'>
+        H$ Hexagonal Grid Library
+      </a>
+      (
+      <a href='http://github.com/lmartel/HexMoney'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Summer 2013
+      </h4>
+      <h4 class='project-status'>
+        v1 finished. v2 in progress!
+      </h4>
+    </h2>
+  </div>
+  <div class='project-description' data-project='chinesecheckers'>
+    <h2>
+      <a href='http://lpm.io/ChineseCheckers'>
+        Chinese Checkers built with H$
+      </a>
+      (
+      <a href='http://github.com/lmartel/ChineseCheckers'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Summer 2013
+      </h4>
+      <h4 class='project-status'>
+        finished
+      </h4>
+    </h2>
+  </div>
   <div class='project-description' data-project='tvtracker'>
     <h2>
-      <a href='http://tvtracker.herokuapp.com'>
+      <a href='http://tv.lpm.io'>
         TVTracker
       </a>
       (
@@ -90,7 +126,7 @@
         Spring 2013
       </h4>
       <h4 class='project-status'>
-        v1 finished. <a href="/contact">I'd love feedback</a> for v2!
+        finished for now. <a href="/contact">I'd love feedback</a> for future iterations!
       </h4>
     </h2>
   </div>
@@ -147,6 +183,12 @@
 </div>
 <ul class='bxslider'>
   <li>
+    <img src='/asset/image/hexmoney.png' />
+  </li>
+  <li>
+    <img src='/asset/image/chinesecheckers.png' />
+  </li>
+  <li>
     <img src='/asset/image/tvtracker.png' />
   </li>
   <li>
@@ -160,14 +202,62 @@
   </li>
 </ul>
 <div class='project-bodies'>
+  <div class='project-description' data-project='hexmoney'>
+    <p>
+      H$, pronounced "Hex Money," is a javascript library I built to simplify creating, processing and rendering hexagonal grids in web apps, designed with browser-based games in mind. This was initially part of my Top Secret Video Game (more about that coming soon, hopefully!), but I thought it was cool enough to pull out into a library.
+    </p>
+    <p>
+      H$ can help you build and display a full game board with just a few lines of code. Create hexagons and attach data and foreground/background image assets, and the H$ grid can render everything for you, manipulate and move the data around and calculate some cool things. Find neighbors, distances, straight lines, etc; there's some animation baked in too.
+    </p>
+    <p>
+      The screenshot comes from a demo app that shows off a few of the library's features, a GUI tool for generating H$ boards. The coordinate system can be tricky to think about, so this tool allows me to create exactly the board I want and copy-paste it into code. It's sorta fun to play around with, too. <a href="http://lpm.io/HexMoney">Check it out here!</a>
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        100% javascript
+      </li>
+      <li>
+        Rendering done with DOM elements using HTML5 SVG (Scalable Vector Graphics)
+      </li>
+      <li>
+        Uses d3.js for DOM manipulation and animations
+      </li>
+    </ul>
+  </div>
+  <div class='project-description' data-project='chinesecheckers'>
+    <p>
+      A browser-based version of the classic game Chinese Checkers, built as a proof of concept using my H$ hexagonal grid library.
+    </p>
+    <p>
+      I loved this game as a kid, so this was a lot of fun to build. No, you can't play online and there's no AI. That's intentional; go find another human being (or several) and have some fun! <a href="http://lpm.io/ChineseCheckers">Play it here.</a>
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        Just javascript (with a bit of html/css)
+      </li>
+      <li>
+        Built with H$, named "the sexiest hexagonal grid library for sexy people" by TechCrunch<super>*</super>
+      </li>
+      <li>
+        Marbles painstakingly shined in Inkscape
+      </li>
+    </ul>
+    <p>
+      <em>
+        *well, no
+      </em>
+    </p>
+  </div>
   <div class='project-description' data-project='tvtracker'>
     <p>
       Can you never remember quite where you stopped after binging a season and a half of Arrested Development in one night? Want one page that lists the dates and times that all your favorite shows will air their next episode? Then TVTracker is the app for you!
     </p>
     <p>
-      A solo hackathon project that I decided to keep working on, this web app can dynamically find and load data on pretty much any TV show you've ever heard of. You can browse cast lists, airdates and more, as well as track your progress as you watch episodes. There's some snazzy animations involved too,
-      <a href='http://tvtracker.herokuapp.com'>
-        check it out!
+      A solo hackathon project that I decided to keep working on, this web app can dynamically find and load data on pretty much any TV show you've ever heard of. You can browse cast lists, airdates and more, as well as track your progress as you watch episodes. There's some snazzy animations involved too.
+      <a href='http://tv.lpm.io'>
+        Check it out here!
       </a>
     </p>
     Tech stuff:
@@ -185,7 +275,7 @@
   </div>
   <div class='project-description' data-project='harmonics'>
     <p>
-      I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="http://harmonics.herokuapp.com">Check it out!</a>
+      I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="http://harmonics.herokuapp.com">Check it out here!</a>
     </p>
     Tech stuff:
     <ul>
