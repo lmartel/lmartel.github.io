@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Lpm.io</title>
-    <link href="http://lpm.io/"/>
-    <link type="application/atom+xml" rel="self" href="http://lpm.io/atom.xml"/>
-    <updated>2013-07-28T16:52:15-07:00</updated>
-    <id>http://lpm.io</id>
+    <link href="http://localhost:4000/"/>
+    <link type="application/atom+xml" rel="self" href="http://localhost:4000/atom.xml"/>
+    <updated>2013-09-04T02:07:44-07:00</updated>
+    <id>http://localhost:4000</id>
     <author>
         <name>Leo Martel</name>
         <email>leo@lpm.io</email>
@@ -12,13 +12,48 @@
 
     
     <entry>
-        <id>http://lpm.io/blog/today</id>
-        <link type="text/html" rel="alternate" href="http://lpm.io/blog/today/"/>
+        <id>http://localhost:4000/blog/i-read-a-book</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/i-read-a-book/"/>
+        <title>BLOG</title>
+        <updated>2013-09-05T00:00:00-07:00</updated>
+        <author>
+            <name>Leo Martel</name>
+            <uri>http://localhost:4000/</uri>
+        </author>
+        <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
+&lt;a href=&quot;/blog/i-read-a-book/&quot;&gt;
+I read a book!
+&lt;/a&gt;
+&lt;/h2&gt;
+
+
+&lt;h5 class=&quot;blog-byline&quot;&gt;
+Leo
+&lt;/h5&gt;
+
+
+&lt;br&gt;
+
+
+&lt;h6 class=&quot;blog-date&quot;&gt;
+Thursday September 05, 2013
+&lt;/h6&gt;
+
+
+&lt;p&gt;The second memoir of a 30-year-old British blogger with a drinking problem, Paul Carr's &lt;a href=&quot;http://www.amazon.com/gp/product/B005CI2IUA/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=B005CI2IUA&amp;amp;linkCode=as2&amp;amp;tag=lpmio-20&quot;&gt;&lt;em&gt;The Upgrade&lt;/em&gt;&lt;/a&gt; is exactly what it says on the tin--until it isn't. Facing the grim prospect of his 30th birthday, Carr abandons his London apartment, hawks all its contents for a few hundred pounds and resolves to spend a year living in luxury hotels and having Ridiculous--that's his catchphrase--adventures. It's a &quot;blagger's guide,&quot; he says in the intro, to living like a king for $100/night, relying only on some shameless fibbing and &quot;lots and lots of delicious alcohol.&quot; Carr delivers impeccably, for a few chapters, on that promise. Did you know that you don't pay local tax on a hotel room if you stay more than a month? Carr does. Have you ever woken up naked in a hotel corridor? Carr has. It's &lt;em&gt;The Hangover&lt;/em&gt; for people who own Kindles.&lt;/p&gt;
+
+&lt;p&gt;However, even in those first few, Ridiculous chapters the real book peers up through the cracks.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <id>http://localhost:4000/blog/today</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/today/"/>
         <title>BLOG</title>
         <updated>2013-06-23T00:00:00-07:00</updated>
         <author>
             <name>Leo Martel</name>
-            <uri>http://lpm.io/</uri>
+            <uri>http://localhost:4000/</uri>
         </author>
         <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
 &lt;a href=&quot;/blog/today/&quot;&gt;
@@ -45,13 +80,13 @@ Sunday June 23, 2013
     </entry>
     
     <entry>
-        <id>http://lpm.io/blog/i-have-a-blog</id>
-        <link type="text/html" rel="alternate" href="http://lpm.io/blog/i-have-a-blog/"/>
+        <id>http://localhost:4000/blog/i-have-a-blog</id>
+        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/i-have-a-blog/"/>
         <title>BLOG</title>
         <updated>2013-06-22T00:00:00-07:00</updated>
         <author>
             <name>Leo Martel</name>
-            <uri>http://lpm.io/</uri>
+            <uri>http://localhost:4000/</uri>
         </author>
         <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
 &lt;a href=&quot;/blog/i-have-a-blog/&quot;&gt;
