@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Lpm.io</title>
-    <link href="http://localhost:4000/"/>
-    <link type="application/atom+xml" rel="self" href="http://localhost:4000/atom.xml"/>
-    <updated>2013-09-04T02:07:44-07:00</updated>
-    <id>http://localhost:4000</id>
+    <link href="http://lpm.io/"/>
+    <link type="application/atom+xml" rel="self" href="http://lpm.io/atom.xml"/>
+    <updated>2013-09-20T00:37:23-07:00</updated>
+    <id>http://lpm.io</id>
     <author>
         <name>Leo Martel</name>
         <email>leo@lpm.io</email>
@@ -12,13 +12,13 @@
 
     
     <entry>
-        <id>http://localhost:4000/blog/i-read-a-book</id>
-        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/i-read-a-book/"/>
+        <id>http://lpm.io/blog/i-read-a-book</id>
+        <link type="text/html" rel="alternate" href="http://lpm.io/blog/i-read-a-book/"/>
         <title>BLOG</title>
         <updated>2013-09-05T00:00:00-07:00</updated>
         <author>
             <name>Leo Martel</name>
-            <uri>http://localhost:4000/</uri>
+            <uri>http://lpm.io/</uri>
         </author>
         <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
 &lt;a href=&quot;/blog/i-read-a-book/&quot;&gt;
@@ -47,13 +47,13 @@ Thursday September 05, 2013
     </entry>
     
     <entry>
-        <id>http://localhost:4000/blog/today</id>
-        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/today/"/>
+        <id>http://lpm.io/blog/today</id>
+        <link type="text/html" rel="alternate" href="http://lpm.io/blog/today/"/>
         <title>BLOG</title>
         <updated>2013-06-23T00:00:00-07:00</updated>
         <author>
             <name>Leo Martel</name>
-            <uri>http://localhost:4000/</uri>
+            <uri>http://lpm.io/</uri>
         </author>
         <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
 &lt;a href=&quot;/blog/today/&quot;&gt;
@@ -80,13 +80,13 @@ Sunday June 23, 2013
     </entry>
     
     <entry>
-        <id>http://localhost:4000/blog/i-have-a-blog</id>
-        <link type="text/html" rel="alternate" href="http://localhost:4000/blog/i-have-a-blog/"/>
+        <id>http://lpm.io/blog/i-have-a-blog</id>
+        <link type="text/html" rel="alternate" href="http://lpm.io/blog/i-have-a-blog/"/>
         <title>BLOG</title>
         <updated>2013-06-22T00:00:00-07:00</updated>
         <author>
             <name>Leo Martel</name>
-            <uri>http://localhost:4000/</uri>
+            <uri>http://lpm.io/</uri>
         </author>
         <content type="html">&lt;h2 class=&quot;blog-heading&quot;&gt;
 &lt;a href=&quot;/blog/i-have-a-blog/&quot;&gt;
