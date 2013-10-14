@@ -3,30 +3,18 @@ layout: default
 title: PROJECTS
 ---
 .project-headers
-    .project-description{:data => {:project => "hexmoney"} }
+    .project-description{:data => {:project => "axisandallies"} }
         %h2
-            %a{:href => "{{ site.hexmoney_url }}"}
-                H$ Hexagonal Grid Library
+            %a{:href => "{{ site.axisandallies_url }}"}
+                Axis and Allies
             (
-            %a{:href => "{{ site.github_url }}/HexMoney"}
+            %a{:href => "{{ site.github_url }}/AxisAndAllies"}
                 code
             )
             %h4.project-date
                 Summer 2013
             %h4.project-status
-                v1 finished. v2 in progress!
-    .project-description{:data => {:project => "chinesecheckers"} }
-        %h2
-            %a{:href => "{{ site.chinesecheckers_url }}"}
-                Chinese Checkers built with H$
-            (
-            %a{:href => "{{ site.github_url }}/ChineseCheckers"}
-                code
-            )
-            %h4.project-date
-                Summer 2013
-            %h4.project-status
-                finished
+                finished!
     .project-description{:data => {:project => "tvtracker"} }
         %h2
             %a{:href => "{{ site.tvtracker_url }}"}
@@ -39,6 +27,18 @@ title: PROJECTS
                 v1 Spring 2013, v2 Summer 2013
             %h4.project-status
                 finished and launched. <a href="/contact">I'd love feedback</a> for future iterations!
+    .project-description{:data => {:project => "chinesecheckers"} }
+        %h2
+            %a{:href => "{{ site.chinesecheckers_url }}"}
+                Chinese Checkers built with H$
+            (
+            %a{:href => "{{ site.github_url }}/ChineseCheckers"}
+                code
+            )
+            %h4.project-date
+                Summer 2013
+            %h4.project-status
+                finished
     .project-description{:data => {:project => "harmonics"} }
         %h2
             %a{:href => "{{ site.harmonics_url }}"}
@@ -50,18 +50,30 @@ title: PROJECTS
             %h4.project-date
                 Winter 2012/13
             %h4.project-status
-                backend finished, design/frontend in progress
-    .project-description{:data => {:project => "snakecubesolver"} }
+                finished
+    .project-description{:data => {:project => "hexmoney"} }
         %h2
-            Snake Cube Solver
+            %a{:href => "{{ site.hexmoney_url }}"}
+                H$ Hexagonal Grid Library
             (
-            %a{:href => "{{ site.github_url }}/SnakeCubeSolver"}
+            %a{:href => "{{ site.github_url }}/HexMoney"}
+                code
+            )
+            %h4.project-date
+                Summer 2013
+            %h4.project-status
+                v1 finished. v2 in progress!
+    .project-description{:data => {:project => "algo"} }
+        %h2
+            Algorithm collection
+            (
+            %a{:href => "{{ site.github_url }}/Algo"}
                 code
             )
             %h4.project-date
                 Winter 2012/13
             %h4.project-status
-                finished
+                ongoing
     .project-description{:data => {:project => "this"} }
         %h2
             This Website
@@ -76,49 +88,37 @@ title: PROJECTS
     
 %ul{:class => "bxslider"}
     %li
-        %img{:src => "/asset/image/hexmoney.png"}
-    %li
-        %img{:src => "/asset/image/chinesecheckers.png"}
+        %img{:src => "/asset/image/axisandallies.png"}
     %li
         %img{:src => "/asset/image/tvtracker.png"}
     %li
+        %img{:src => "/asset/image/chinesecheckers.png"}
+    %li
         %img{:src => "/asset/image/harmonics.png"}
     %li
-        %img{:src => "/asset/image/snakecubesolver.png"}
+        %img{:src => "/asset/image/hexmoney.png"}
+    %li
+        %img{:src => "/asset/image/algo.png"}
     %li
         %img{:src => "/asset/image/this.png"}
 
 .project-bodies
-    .project-description{:data => {:project => "hexmoney"} }
+    .project-description{:data => {:project => "axisandallies"} }
         %p
-            H$, pronounced "Hex Money," is a javascript library I built to simplify creating, processing and rendering hexagonal grids in web apps, designed with browser-based games in mind. This was initially part of my Top Secret Video Game (more about that coming soon, hopefully!), but I thought it was cool enough to pull out into a library.
-        %p
-            H$ can help you build and display a full game board with just a few lines of code. Create hexagons and attach data and foreground/background image assets, and the H$ grid can render everything for you, manipulate and move the data around and calculate some cool things. Find neighbors, distances, straight lines, etc; there's some animation baked in too.
-        %p
-            The screenshot comes from a demo app that shows off a few of the library's features, a GUI tool for generating H$ boards. The coordinate system can be tricky to think about, so this tool allows me to create exactly the board I want and copy-paste it into code. It's sorta fun to play around with, too. <a href="{{ site.hexmoney_url }}">Check it out here!</a>
+            Axis and Allies is a tabletop minatures game I played a lot as a kid. This is my HTML5 tribute to that game: it's animated, multiplayer, completely free, and (I think) a lot of fun, so <a href="{{ site.axisandallies_url }}">give it a try</a>! This is (for now) by far my largest solo project.
+
         Tech stuff:
         %ul
             %li
-                100% javascript
+                Pure javascript (both client and server)
             %li
-                Rendering done with DOM elements using HTML5 SVG (Scalable Vector Graphics)
+                Multiplayer over the web, with both synchronous and asynchronous gameplay
             %li
-                Uses d3.js for DOM manipulation and animations
-
-
-    .project-description{:data => {:project => "chinesecheckers"} }
-        %p
-            A browser-based version of the classic game Chinese Checkers, built as a proof of concept using my H$ hexagonal grid library. 
-        %p
-            I loved this game as a kid, so this was a lot of fun to build. No, you can't play online and there's no AI. That's intentional; go find another human being (or several) and have some fun! <a href="{{ site.chinesecheckers_url }}">Play it here.</a>
-        Tech stuff:
-        %ul
+                Heavily database-driven: features autosave and instant replays
             %li
-                Just javascript (with a bit of html/css)
+                Infrastructure built with Meteor.js, an awesome (and as of writing half-finished) web framework
             %li
                 Built with H$, named "the sexiest hexagonal grid library for sexy people" by TechCrunch<super>*</super>
-            %li
-                Marbles painstakingly shined in Inkscape
         %p
             %em
                 *well, no
@@ -140,9 +140,26 @@ title: PROJECTS
             %li
                 Animations built with JavaScript and jQuery
 
+    .project-description{:data => {:project => "chinesecheckers"} }
+        %p
+            A browser-based version of the classic game Chinese Checkers, built as a proof of concept using my H$ hexagonal grid library. 
+        %p
+            I loved this game as a kid, so this was a lot of fun to build. No, you can't play online and there's no AI. That's intentional; go find another human being (or several) and have some fun! <a href="{{ site.chinesecheckers_url }}">Play it here.</a>
+        Tech stuff:
+        %ul
+            %li
+                Just javascript (with a bit of html/css)
+            %li
+                Built with H$, named "the sexiest hexagonal grid library for sexy people" by TechCrunch<super>*</super>
+            %li
+                Marbles painstakingly shined in Inkscape
+        %p
+            %em
+                *well, no
+
     .project-description{:data => {:project => "harmonics"} }
         %p
-            I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="{{ site.harmonics_url }}">Check it out here!</a>
+            I built my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes, which makes it easier to keep everything up to date. <a href="{{ site.harmonics_url }}">Check it out here!</a>
 
         Tech stuff:
         %ul
@@ -152,19 +169,40 @@ title: PROJECTS
                 Built on top of a Content Management System (Refinery) to allow GUI editing of static webpage content
             %li
                 Uses Refinery Engines (small rails apps nested inside the root app) for managing the more complex models
-            
-    .project-description{:data => {:project => "snakecubesolver"} }
-        %p
-            This is a solution I wrote for a recruiting problem involving <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cubes</a>. Given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations. 
 
+    .project-description{:data => {:project => "hexmoney"} }
         %p
-            This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway; <a href="{{ site.github_url }}/SnakeCubeSolver">check out the code here</a> instead.
+            H$, pronounced "Hex Money," is a javascript library I built to simplify creating, processing and rendering hexagonal grids in web apps, designed with browser-based games in mind. This was initially part of my Top Secret Video Game (more about that coming soon, hopefully!), but I thought it was cool enough to pull out into a library.
+        %p
+            H$ can help you build and display a full game board with just a few lines of code. Create hexagons and attach data and foreground/background image assets, and the H$ grid can render everything for you, manipulate and move the data around and calculate some cool things. Find neighbors, distances, straight lines, etc; there's some animation baked in too.
+        %p
+            The screenshot comes from a demo app that shows off a few of the library's features, a GUI tool for generating H$ boards. The coordinate system can be tricky to think about, so this tool allows me to create exactly the board I want and copy-paste it into code. It's sorta fun to play around with, too. <a href="{{ site.hexmoney_url }}">Check it out here!</a>
         Tech stuff:
         %ul
             %li
-                Built with Java
+                100% javascript
             %li
-                Basically a recursive algorithm with some error checking and fluff
+                Rendering done with DOM elements using HTML5 SVG (Scalable Vector Graphics)
+            %li
+                Uses d3.js for DOM manipulation and animations
+            
+    .project-description{:data => {:project => "algo"} }
+        %p
+            This project is a collection of interesting algorithms I've implemented for one reason or another. Various languages. Highlights include:
+        %p
+            A* pathfinding algorithm: a JavaScript implementation of A*, often used for finding shortest paths in games. Completely generic and customizable, suitable for plugging into any pathfinding problem. It includes a PriorityQueue implementation and test suite, which could also be used on its own. There's no standalone demo but <a href="{{ site.axisandallies_url }}">I use it in this game</a>.
+        %p
+            A JavaScript hexagon spiral distance calculator (<a href="{{ site.url }}/affirm">with a demo</a>): given a pair of hexagons denoted in spiral coordinates (the most inconvenient coordinate system imaginable), this program can find the distance between them in constant time. 
+        %p
+            A Java (this one's older) <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cube</a> solver: given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations. There's no demo because Java, but you can check out the source code or even download and compile it if you really want to.
+        Tech stuff:
+        %ul
+            %li
+                Various langauges (Java and JavaScript at time of writing)
+            %li
+                These are all licensed under the MIT license--use them if you want them!
+            %li
+                Each algorithm has a README, check those out for more details
     .project-description{:data => {:project => "this"} }
         %p
             What, <a href="#this">too meta?</a>

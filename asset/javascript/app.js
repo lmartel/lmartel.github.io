@@ -19,6 +19,27 @@ function setUpProjects(){
     onSlidePrev: function(){
       slideWithWrap(false);
     },
+    onSliderLoad: function(){
+      $('.bx-pager-item').on("click", function(){
+        var index = $(this).index();
+        switchToProject(".project-headers .project-description", index);
+        switchToProject(".project-bodies .project-description", index);
+      });
+    }
+  });  
+}
+
+function switchToProject(selector, index){
+  $(selector).each(function(i, elem){
+    var next = $(elem);
+    if(i === index && !next.hasClass("selected")){
+      $(selector + ".selected").fadeOut(150, function(){
+        $(this).removeClass("selected");
+        next.fadeIn(350, function(){
+          $(this).addClass("selected");
+        });
+      });
+    }
   });
 }
 
@@ -57,5 +78,4 @@ function getProjectIndexFromUrl(){
 
 function projectsUpdateToUrl(){
   var project = $(".project-headers .project-description.selected").attr("data-project");
-  
 }

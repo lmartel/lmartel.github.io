@@ -76,13 +76,13 @@
         <div class='hero'></div>
         
         <div class='project-headers'>
-  <div class='project-description' data-project='hexmoney'>
+  <div class='project-description' data-project='axisandallies'>
     <h2>
-      <a href='http://lpm.io/HexMoney'>
-        H$ Hexagonal Grid Library
+      <a href='http://game.lpm.io'>
+        Axis and Allies
       </a>
       (
-      <a href='http://github.com/lmartel/HexMoney'>
+      <a href='http://github.com/lmartel/AxisAndAllies'>
         code
       </a>
       )
@@ -90,25 +90,7 @@
         Summer 2013
       </h4>
       <h4 class='project-status'>
-        v1 finished. v2 in progress!
-      </h4>
-    </h2>
-  </div>
-  <div class='project-description' data-project='chinesecheckers'>
-    <h2>
-      <a href='http://lpm.io/ChineseCheckers'>
-        Chinese Checkers built with H$
-      </a>
-      (
-      <a href='http://github.com/lmartel/ChineseCheckers'>
-        code
-      </a>
-      )
-      <h4 class='project-date'>
-        Summer 2013
-      </h4>
-      <h4 class='project-status'>
-        finished
+        finished!
       </h4>
     </h2>
   </div>
@@ -130,6 +112,24 @@
       </h4>
     </h2>
   </div>
+  <div class='project-description' data-project='chinesecheckers'>
+    <h2>
+      <a href='http://lpm.io/ChineseCheckers'>
+        Chinese Checkers built with H$
+      </a>
+      (
+      <a href='http://github.com/lmartel/ChineseCheckers'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Summer 2013
+      </h4>
+      <h4 class='project-status'>
+        finished
+      </h4>
+    </h2>
+  </div>
   <div class='project-description' data-project='harmonics'>
     <h2>
       <a href='http://harmonics.herokuapp.com'>
@@ -144,15 +144,33 @@
         Winter 2012/13
       </h4>
       <h4 class='project-status'>
-        backend finished, design/frontend in progress
+        finished
       </h4>
     </h2>
   </div>
-  <div class='project-description' data-project='snakecubesolver'>
+  <div class='project-description' data-project='hexmoney'>
     <h2>
-      Snake Cube Solver
+      <a href='http://lpm.io/HexMoney'>
+        H$ Hexagonal Grid Library
+      </a>
       (
-      <a href='http://github.com/lmartel/SnakeCubeSolver'>
+      <a href='http://github.com/lmartel/HexMoney'>
+        code
+      </a>
+      )
+      <h4 class='project-date'>
+        Summer 2013
+      </h4>
+      <h4 class='project-status'>
+        v1 finished. v2 in progress!
+      </h4>
+    </h2>
+  </div>
+  <div class='project-description' data-project='algo'>
+    <h2>
+      Algorithm collection
+      (
+      <a href='http://github.com/lmartel/Algo'>
         code
       </a>
       )
@@ -160,7 +178,7 @@
         Winter 2012/13
       </h4>
       <h4 class='project-status'>
-        finished
+        ongoing
       </h4>
     </h2>
   </div>
@@ -183,65 +201,48 @@
 </div>
 <ul class='bxslider'>
   <li>
-    <img src='/asset/image/hexmoney.png' />
-  </li>
-  <li>
-    <img src='/asset/image/chinesecheckers.png' />
+    <img src='/asset/image/axisandallies.png' />
   </li>
   <li>
     <img src='/asset/image/tvtracker.png' />
   </li>
   <li>
+    <img src='/asset/image/chinesecheckers.png' />
+  </li>
+  <li>
     <img src='/asset/image/harmonics.png' />
   </li>
   <li>
-    <img src='/asset/image/snakecubesolver.png' />
+    <img src='/asset/image/hexmoney.png' />
+  </li>
+  <li>
+    <img src='/asset/image/algo.png' />
   </li>
   <li>
     <img src='/asset/image/this.png' />
   </li>
 </ul>
 <div class='project-bodies'>
-  <div class='project-description' data-project='hexmoney'>
+  <div class='project-description' data-project='axisandallies'>
     <p>
-      H$, pronounced "Hex Money," is a javascript library I built to simplify creating, processing and rendering hexagonal grids in web apps, designed with browser-based games in mind. This was initially part of my Top Secret Video Game (more about that coming soon, hopefully!), but I thought it was cool enough to pull out into a library.
-    </p>
-    <p>
-      H$ can help you build and display a full game board with just a few lines of code. Create hexagons and attach data and foreground/background image assets, and the H$ grid can render everything for you, manipulate and move the data around and calculate some cool things. Find neighbors, distances, straight lines, etc; there's some animation baked in too.
-    </p>
-    <p>
-      The screenshot comes from a demo app that shows off a few of the library's features, a GUI tool for generating H$ boards. The coordinate system can be tricky to think about, so this tool allows me to create exactly the board I want and copy-paste it into code. It's sorta fun to play around with, too. <a href="http://lpm.io/HexMoney">Check it out here!</a>
+      Axis and Allies is a tabletop minatures game I played a lot as a kid. This is my HTML5 tribute to that game: it's animated, multiplayer, completely free, and (I think) a lot of fun, so <a href="http://game.lpm.io">give it a try</a>! This is (for now) by far my largest solo project.
     </p>
     Tech stuff:
     <ul>
       <li>
-        100% javascript
+        Pure javascript (both client and server)
       </li>
       <li>
-        Rendering done with DOM elements using HTML5 SVG (Scalable Vector Graphics)
+        Multiplayer over the web, with both synchronous and asynchronous gameplay
       </li>
       <li>
-        Uses d3.js for DOM manipulation and animations
+        Heavily database-driven: features autosave and instant replays
       </li>
-    </ul>
-  </div>
-  <div class='project-description' data-project='chinesecheckers'>
-    <p>
-      A browser-based version of the classic game Chinese Checkers, built as a proof of concept using my H$ hexagonal grid library.
-    </p>
-    <p>
-      I loved this game as a kid, so this was a lot of fun to build. No, you can't play online and there's no AI. That's intentional; go find another human being (or several) and have some fun! <a href="http://lpm.io/ChineseCheckers">Play it here.</a>
-    </p>
-    Tech stuff:
-    <ul>
       <li>
-        Just javascript (with a bit of html/css)
+        Infrastructure built with Meteor.js, an awesome (and as of writing half-finished) web framework
       </li>
       <li>
         Built with H$, named "the sexiest hexagonal grid library for sexy people" by TechCrunch<super>*</super>
-      </li>
-      <li>
-        Marbles painstakingly shined in Inkscape
       </li>
     </ul>
     <p>
@@ -273,9 +274,34 @@
       </li>
     </ul>
   </div>
+  <div class='project-description' data-project='chinesecheckers'>
+    <p>
+      A browser-based version of the classic game Chinese Checkers, built as a proof of concept using my H$ hexagonal grid library.
+    </p>
+    <p>
+      I loved this game as a kid, so this was a lot of fun to build. No, you can't play online and there's no AI. That's intentional; go find another human being (or several) and have some fun! <a href="http://lpm.io/ChineseCheckers">Play it here.</a>
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        Just javascript (with a bit of html/css)
+      </li>
+      <li>
+        Built with H$, named "the sexiest hexagonal grid library for sexy people" by TechCrunch<super>*</super>
+      </li>
+      <li>
+        Marbles painstakingly shined in Inkscape
+      </li>
+    </ul>
+    <p>
+      <em>
+        *well, no
+      </em>
+    </p>
+  </div>
   <div class='project-description' data-project='harmonics'>
     <p>
-      I'm building my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes. <a href="http://harmonics.herokuapp.com">Check it out here!</a>
+      I built my college a capella group, <a href="http://open.spotify.com/artist/528Rcthd9JqtIrlbrGKNsG">The Stanford Harmonics</a>, a new website from scratch. In addition to presenting our news, albums, performance dates, etc to the public, the website can be used by group members for scheduling auditions, sharing arrangements and midi files, and editing any of the static content from a web interface. The only reason to change the code is for actual code changes, rather than for content changes, which makes it easier to keep everything up to date. <a href="http://harmonics.herokuapp.com">Check it out here!</a>
     </p>
     Tech stuff:
     <ul>
@@ -290,20 +316,52 @@
       </li>
     </ul>
   </div>
-  <div class='project-description' data-project='snakecubesolver'>
+  <div class='project-description' data-project='hexmoney'>
     <p>
-      This is a solution I wrote for a recruiting problem involving <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cubes</a>. Given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations.
+      H$, pronounced "Hex Money," is a javascript library I built to simplify creating, processing and rendering hexagonal grids in web apps, designed with browser-based games in mind. This was initially part of my Top Secret Video Game (more about that coming soon, hopefully!), but I thought it was cool enough to pull out into a library.
     </p>
     <p>
-      This is a command line java program and I don't have it hosted anywhere, so good luck running it. Honestly, the algorithm is cooler than the results anyway; <a href="http://github.com/lmartel/SnakeCubeSolver">check out the code here</a> instead.
+      H$ can help you build and display a full game board with just a few lines of code. Create hexagons and attach data and foreground/background image assets, and the H$ grid can render everything for you, manipulate and move the data around and calculate some cool things. Find neighbors, distances, straight lines, etc; there's some animation baked in too.
+    </p>
+    <p>
+      The screenshot comes from a demo app that shows off a few of the library's features, a GUI tool for generating H$ boards. The coordinate system can be tricky to think about, so this tool allows me to create exactly the board I want and copy-paste it into code. It's sorta fun to play around with, too. <a href="http://lpm.io/HexMoney">Check it out here!</a>
     </p>
     Tech stuff:
     <ul>
       <li>
-        Built with Java
+        100% javascript
       </li>
       <li>
-        Basically a recursive algorithm with some error checking and fluff
+        Rendering done with DOM elements using HTML5 SVG (Scalable Vector Graphics)
+      </li>
+      <li>
+        Uses d3.js for DOM manipulation and animations
+      </li>
+    </ul>
+  </div>
+  <div class='project-description' data-project='algo'>
+    <p>
+      This project is a collection of interesting algorithms I've implemented for one reason or another. Various languages. Highlights include:
+    </p>
+    <p>
+      A* pathfinding algorithm: a JavaScript implementation of A*, often used for finding shortest paths in games. Completely generic and customizable, suitable for plugging into any pathfinding problem. It includes a PriorityQueue implementation and test suite, which could also be used on its own. There's no standalone demo but <a href="http://game.lpm.io">I use it in this game</a>.
+    </p>
+    <p>
+      A JavaScript hexagon spiral distance calculator (<a href="http://lpm.io/affirm">with a demo</a>): given a pair of hexagons denoted in spiral coordinates (the most inconvenient coordinate system imaginable), this program can find the distance between them in constant time.
+    </p>
+    <p>
+      A Java (this one's older) <a href="http://en.wikipedia.org/wiki/Snake_cube">snake cube</a> solver: given a binary string representing a snake cube (a series of small cubes threaded by a string), this program will tell you whether it's possible to create a single large cube out of it using only legal rotations. There's no demo because Java, but you can check out the source code or even download and compile it if you really want to.
+    </p>
+    Tech stuff:
+    <ul>
+      <li>
+        Various langauges (Java and JavaScript at time of writing)
+      </li>
+      <li>
+        These are all licensed under the MIT license--use them if you want them!
+      </li>
+      <li>
+        Each algorithm has a README, check those out for more details
       </li>
     </ul>
   </div>
