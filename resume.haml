@@ -11,4 +11,10 @@ title: RESUME
     %a{:href => "{{ site.resume_url }}"}
         Download (right click > "Save As")
 
-%iframe{:src => "{{ site.resume_url }}", :class => "resume-iframe"}
+%object{:data => "{{ site.resume_url }}", :type => "application/pdf", :class => "resume-iframe"}
+    %p 
+        It looks like you don't have a PDF plugin for this browser. You can 
+        %a{:href => "{{ site.resume_url }}"}
+            download the PDF 
+
+        instead.
