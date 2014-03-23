@@ -1,6 +1,6 @@
 # -*- ruby -*-
 
-source :rubygems
+source 'https://rubygems.org'
 
 gem "foreman"
 gem "haml"
