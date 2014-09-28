@@ -20,8 +20,8 @@ function setUpProjects(){
       slideWithWrap(false);
     },
     onSliderLoad: function(){
-      $('.bx-pager-item').on("click", function(){
-        var index = $(this).index();
+      $('.bx-pager-item a').on("click", function(){
+        var index = $(this).closest('.bx-pager-item').index();
         switchToProject(".project-headers .project-description", index);
         switchToProject(".project-bodies .project-description", index);
       });
@@ -33,6 +33,7 @@ function switchToProject(selector, index){
   $(selector).each(function(i, elem){
     var next = $(elem);
     if(i === index && !next.hasClass("selected")){
+      window.location.hash = next.attr("data-project");
       $(selector + ".selected").fadeOut(150, function(){
         $(this).removeClass("selected");
         next.fadeIn(350, function(){

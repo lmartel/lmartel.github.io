@@ -1,0 +1,42 @@
+---
+layout: default
+title: PROJECTS
+---
+<div class="project-headers">
+  {% for doc in site.projects %}
+  <div class="project-description" data-project="{{ doc.github }}" data-rank="{{ doc.rank }}">
+    <h2>
+      <a href="{{ doc.url }}">
+        {{ doc.title }}
+      </a>
+      (<a href="{{ site.github_url }}/{{ doc.github }}">code</a>)
+    </h2>
+    <h4 class="project-date">
+      {{ doc.date }}
+    </h4>
+    <h4 class="project-status">
+      {{ doc.status }}
+    </h4>
+  </div>
+  {% endfor %}
+</div>
+
+<ul class="bxslider">
+  {% for doc in site.projects %}
+  <li><img src="/asset/image/{{ doc.github | downcase }}.png"></li>
+  {% endfor %}
+</ul>
+<hr>
+<div class="project-bodies">
+  {% for doc in site.projects %}
+  <div class="project-description" data-project="{{ doc.title }}" data-rank="{{ doc.rank }}">
+    {{ doc.output }}
+  </div>
+  {% endfor %}
+</div>
+<style>
+.project-bodies h1, .project-bodies h2, .project-bodies h3, .project-bodies h4, .project-bodies h5 {
+    color: #2A2A2A;
+    text-align: left;
+}
+</style>
