@@ -15,6 +15,7 @@ author_email: leo@lpm.io
 title: Lpm.io
 # url: http://localhost:4000     # Development
 url: http://lpm.io               # Production
+pub_url: http://leo.pub
 github_url: http://github.com/lmartel
 linkedin_url: http://www.linkedin.com/in/leopmartel/
 
