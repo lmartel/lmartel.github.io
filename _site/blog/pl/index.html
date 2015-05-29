@@ -80,98 +80,97 @@
 Programming Languages and the Path to Enlightenment
 </a>
 </h2>
+
+
 <h5 class="blog-byline">
 Leo
 </h5>
+
+
 <p><br></p>
+
 <h6 class="blog-date">
 Thursday April 23, 2015
 </h6>
+
+
+
+
 <script>
-<!-- / This Liquid/Jekyll/Haml/Markdown blog engine homunculus is a complete disaster, but let's just make this work for now -->
+// This Liquid/Jekyll/Haml/Markdown blog engine homunculus is a complete disaster, but let's just make this work for now
 var hotfix = document.createElement('style')
 hotfix.innerHTML = "code { background: none; }";
 document.head.appendChild(hotfix);
 </script>
+
+
 <p><em>This post is adapted from a workshop I put together to introduce beginning and intermediate Computer Science students to programming language theory.</em></p>
+
 <h4>Why Languages Matter</h4>
+
 <p>There are an awful lot of programming languages. Even if we chop off the <a href="//en.wikipedia.org/wiki/Long_tail">long tail</a> and consider only "popular" languages, there still seem to be quite a few competing for programmers' attention. According to the <a href="//www.tiobe.com/index.php/content/paperinfo/tpci/index.html">TIOBE Index</a>, more than twenty different languages get at least 1% each of all language-related search queries. Although Java and C are by far the most searched-for languages, together they still account for less than a third of programmers' mental market share.</p>
+
 <p>When thinking about languages, the question inevitably becomes: "which one should <em>I</em> use?" There are lots of easy answers to this question. If you're writing web apps, you're going to need some flavor of JavaScript. If you need to have something small done by yesterday, just choose something you've used before. If you're raising venture capital, use <a href="//nodejs.org/">Node.js</a> because it's Hip and Webscale.</p>
+
 <p>However, sometimes there isn't an easy answer. When starting a new project, unencumbered by legacy code or platform limitations, how can you be smart about your language choice? There's probably no Best Language, or else everyone would be using it. Even very specific categories offer enough popular options to incite perpetual flamewars (check out <a href="//c2.com/cgi/wiki?HolyWar">Holy War: PythonVsRuby</a> if you're looking for a dynamic, high-level, garbage-collected, object-oriented, interpreted language). There are lots of reasons to choose a language: some good, like library support; some bad, like syntax; and some ugly, like <a href="//users.cms.caltech.edu/~mvanier/hacking/rants/cars.html">stereotypes and joke punchlines</a>. The most interesting (and useful) "good" reason I've run into, though, comes from <a href="//www.cs.virginia.edu/~evans/cs655/readings/steele.pdf">Guy Steele's description of "growable" languages</a>, which I found on the <a href="//www.recurse.com/blog/41-introducing-paper-of-the-week">Recurse Center (then Hacker School) blog</a></p>
+
 <h4>Language Growth</h4>
+
 <p>Steele's paper is great and I highly recommend reading the whole thing, but the <a href="//en.wikipedia.org/wiki/TL;DR">tl;dr</a> is that language designers can't include every feature everyone needs, but giving programmers the tools to implement what they need <strong>as first-class language features</strong> is close enough. Any <a href="//en.wikipedia.org/wiki/Turing_completeness">Turing complete</a> language will let users implement whatever they want (more or less) <em>somehow</em>, but that bold bit is important. The rest of this post is my attempt to explain the meaning and importance of first-class language growth.</p>
+
 <p>In <del>some</del> most languages, there is a distinction between features built into the language (what I'm calling first-class functionality) and features added by users of the language (libraries). Take Java as an example. Java is a Mostly Object-Oriented language, but it has primitive "raw" types that aren't objects, like <code>int</code> and <code>boolean</code>, used to improve performance and confuse newbies. From the <a href="//docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">official Oracle documentation</a>, "a primitive type is predefined by the language and is named by a reserved keyword." There are eight of them. If you want nine, or zero, tough luck.</p>
+
 <h3>Some Numbers Are More Equal Than Others</h3>
+
 <p>One of the easiest-to-understand privileges given to Java primitives but not objects is use of the arithmetic operators <code>+</code><sup id="ref1"><a href="#note1">1</a></sup>,<code>-</code>,<code>*</code>,<code>/</code>, and <code>%</code>. Many programs do a lot of arithmetic, so it's very handy to be able to say <code>int x = y + z</code> instead of <code>add(y, z)</code> or <code>x.add(y, z)</code>. Custom numeric types, on the other hand, must use the "named method" form. This works just fine, but it's more verbose and feels a little icky. There are lots of reasons to use custom numeric types: for example, using custom types for unit conversions is a great way to prevent bugs. Trying to divide Hours by Miles to get MPH will trigger a compiler error, preventing issues down the line.  Here's a Java program from the wokshop that takes this approach:</p>
+
 <p><a id="st1" href="#end1">jump to end</a></p>
+
 <script src="https://gist.github.com/lmartel/e02efe00c6b3a3319cb6.js"></script>
+
+
 <p><a id="end1" href="#st1">jump to start</a></p>
+
 <p><span id="jmp1"></span> This program accomplishes the task, but <code>mph.mul(h)</code> feels clunky. We want our Hour and Mile types to <em>feel</em> like numbers, but without operators that's just not possible in Java.</p>
+
 <h3>No New Numbers</h3>
+
 <p>In languages like C++ that support custom operators, we can get further. Here's what the same program looks like in C++:</p>
+
 <p><a id="st2" href="#end2">jump to end</a></p>
+
 <script src="https://gist.github.com/lmartel/9752abb11e64d8a7f925.js"></script>
+
+
 <p><a id="end2" href="#st2">jump to start</a></p>
+
 <p>We can do <code>mph * h</code> now. Woohoo! That said, there's more to truly growable languages than operator overloading! Our types still clearly aren't proper numbers. Many existing functions that operate on numbers expect their inputs to look a certain way. For example, the standard math library<sup id="ref2"><a href="#note2">2</a></sup> offers three flavors of absolute value: <code>abs(double x), abs(float x), abs(long double x)</code>. All three of these are built-in primitive types, just like in Java. To use this function on a Miles object, we'd need to do something like <code>Miles(abs(miles.value))</code>. Again, this <em>works</em>, it just doesn't feel right. We know that Miles and Hours are numbers, so why doesn't the compiler know it too?</p>
+
 <h3>If It Quacks Like A Number</h3>
+
 <p>Another factor of language growability is the level of abstraction built into and expected by the language: for example, whether standard libraries typically operate on interfaces or typeclasses<sup id="ref3"><a href="#note3">3</a></sup>, or on concrete types. An interface is a description of <em>behavior</em>. For example, the <code>Num</code> typeclass in Haskell guarantees the existence of <code>+</code>, <code>*</code>, etc, but not what they do. A concrete type is a description of <em>identity</em>, like <code>float</code> or <code>Bignum</code>. As discussed above, nearly all math libraries in C++ expect numbers to look a certain way, usually based on the primitive <code>int</code> and <code>float</code> types. Custom numeric types aren't compatible with these libraries without a bunch "unwrap value, apply function, wrap up value again" boilerplate. In contrast, many numeric libraries in Haskell operate on the <code>Num</code> typeclass; if we make our new type an instance of this typeclass then we can take advantage of these existing libraries for free. Here's that same program one last time, in Haskell. The code is heavily commented, since Haskell is less familiar and intuitive than Java or C++ for many programmers, myself included.</p>
+
 <p><a id="st3" href="#end3">jump to end</a></p>
+
 <script src="https://gist.github.com/lmartel/a15c001c5892990317b9.js"></script>
+
+
 <p><a id="end3" href="#st3">jump to start</a></p>
+
 <p>Notice that this time around, our new numeric types can be used with some builtin math libraries, like the <code>sum</code> function that operates on a list of <code>Num</code>s. Neat!</p>
+
 <h3>Wrapping Up</h3>
+
 <p>One of Steele's central points in <em>Growing a Language</em> is that as a user of a programming language, you will <strong>inevitably</strong> need a feature that the language creators didn't or couldn't implement. At this point you have two choices: do something else, or implement it yourself. Often enough, doing something else is the right choice. Sometimes there's a good reason that a feature doesn't exist--maybe there's a better approach, or maybe you're just trying to do something stupid and the language wants to save you from yourself. The rest of the time, though, having the option to implement missing language features or even missing language syntax<sup id="ref4"><a href="#note4">4</a></sup> is a huge boon to developer productivity and happiness.</p>
+
 <p><br><br><br>
 <strong id="note1">[1]</strong> The <code>+</code> operator can also be used for String concatenation, a great example of language implementors breaking their own rules for convenience while preventing users from doing the same. <a href="#ref1">&#8617;</a></p>
+
 <p><strong id="note2">[2]</strong> A templatized version for <a href="http://www.cplusplus.com/reference/type_traits/is_integral/">integral types</a> was added in C++11. We're learning! <a href="#ref2">&#8617;</a></p>
+
 <p><strong id="note3">[3]</strong> There are important differences between interfaces (à la Java) and typeclasses (à la Haskell), but they're thoroughly out of scope here. Check out <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.99.8567">this paper by Lämmel and Ostermann</a> if you're interested. <a href="#ref3">&#8617;</a></p>
+
 <p><strong id="note4">[4]</strong> The best example of languages with growable syntax is the Lisp family, which I'm not really qualified to write about. <a href="//www.paulgraham.com/diff.html">Paul Graham's <em>What Made Lisp Different</em></a> is a good place to start. <a href="#ref4">&#8617;</a></p>
-<br>
-<hr>
-<h2 class="blog-heading">
-<a href="/blog/tomorrow/">
-Tomorrow
-</a>
-</h2>
-<h5 class="blog-byline">
-Leo
-</h5>
-<p><br></p>
-<h6 class="blog-date">
-Wednesday April 22, 2015
-</h6>
-<p>...is! I wrote a thing! I'm going to post it! Woohoo!</p>
-<br>
-<hr>
-<h2 class="blog-heading">
-<a href="/blog/today/">
-Today
-</a>
-</h2>
-<h5 class="blog-byline">
-Leo
-</h5>
-<p><br></p>
-<h6 class="blog-date">
-Sunday June 23, 2013
-</h6>
-<p>...is not that day.</p>
-<br>
-<hr>
-<h2 class="blog-heading">
-<a href="/blog/i-have-a-blog/">
-I have a blog!
-</a>
-</h2>
-<h5 class="blog-byline">
-Leo
-</h5>
-<p><br></p>
-<h6 class="blog-date">
-Saturday June 22, 2013
-</h6>
-<p>Yep, this is a blog alright.</p>
-<p>Maybe someday I'll put something on it.</p>
 
       </div>
       <div class='content-background'></div>
