@@ -8,12 +8,12 @@
     {% else %}
     <title>{{ site.title }}</title>
     {% endif %}
-    <link href='{{ site.url }}/asset/css/app.css' rel='stylesheet'>
-    <link href='{{ site.url }}/asset/css/vendor/jquery.bxslider.css' rel='stylesheet'>
-    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet'>
-    <link href='{{ site.url }}/atom.xml' rel='alternate' title='Sitewide ATOM Feed' type='application/atom+xml'>
-    <link href='{{ site.url }}/asset/javascript/vendor/custom.modernizr.js' rel='javascript'>
+    <link href='/asset/css/app.css' rel='stylesheet'>
+    <link href='/asset/css/vendor/jquery.bxslider.css' rel='stylesheet'>
+    <link href='//fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet'>
+    <link href='/atom.xml' rel='alternate' title='Sitewide ATOM Feed' type='application/atom+xml'>
+    <link href='/asset/javascript/vendor/custom.modernizr.js' rel='javascript'>
   </head>
   <body>
     <div class='contain-to-grid fixed'>
@@ -21,7 +21,7 @@
         <ul class='title-area'>
           <li class='name'>
             <h1>
-              <a href='{{ site.url }}'>{{ site.title }}</a>
+              <a href='/'>{{ site.title }}</a>
             </h1>
           </li>
           <li class='toggle-topbar menu-icon'>
@@ -33,22 +33,22 @@
         <section class='top-bar-section'>
           <ul class='right'>
             <li>
-              <a href='{{ site.url }}/' id='nav-home'>
+              <a href='/' id='nav-home'>
                 HOME
               </a>
             </li>
             <li>
-              <a href='{{ site.url }}/blog/' id='nav-blog'>
+              <a href='/blog/' id='nav-blog'>
                 BLOG
               </a>
             </li>
             <li>
-              <a href='{{ site.url }}/projects/' id='nav-projects'>
+              <a href='/projects/' id='nav-projects'>
                 PROJECTS
               </a>
             </li>
             <li>
-              <a href='{{ site.url }}/resume/' id='nav-resume'>
+              <a href='/resume/' id='nav-resume'>
                 RESUME
               </a>
             </li>
@@ -77,7 +77,7 @@
         </div>
         <div class='hero'></div>
         {% if page.header %}
-        <img alt='Header' src='{{ site.url }}/asset/image/header/{{ page.header }}'>
+        <img alt='Header' src='/asset/image/header/{{ page.header }}'>
         {% endif %}
         {{ content }}
       </div>
