@@ -1,0 +1,12 @@
+---
+layout: default
+title: ~~
+---
+
+{% for post in site.drafts limit:10 %}
+{{ post.content }}
+{% unless forloop.last %}
+<br>
+<hr>
+{% endunless %}
+{% endfor %}

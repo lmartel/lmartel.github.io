@@ -9,18 +9,14 @@ task :default => [:clean, :compile] do
 end
 
 task :clean do
-    puts `make -C _layouts clean`
     puts `rm -rf _site`
 end
 
 task :compile do
-    puts `make -C _layouts`
     puts `jekyll build --trace`
-    # puts `compass compile -c compass.rb`
 end
 
-task :runserver => [:clean, :compile] do
-    # puts `compass compile -c compass.rb`
+task :runserver do
     puts `jekyll serve --watch`
 end
 
@@ -53,4 +49,3 @@ namespace :dev do
         puts `bundle install`
     end
 end
-

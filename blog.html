@@ -3,10 +3,10 @@ layout: default
 title: BLOG
 ---
 
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:10 %}
 {{ post.content }}
 {% unless forloop.last %}
-%br
-%hr
+<br>
+<hr>
 {% endunless %}
 {% endfor %}

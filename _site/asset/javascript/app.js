@@ -26,7 +26,7 @@ function setUpProjects(){
         switchToProject(".project-bodies .project-description", index);
       });
     }
-  });  
+  });
 }
 
 function switchToProject(selector, index){
