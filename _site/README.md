@@ -1,7 +1,7 @@
 lmartel.github.io
 =================
 
-This is my personal website! Here you can read my blog (just in case I ever post anything on it), look at some of my programming side projects, check out my credentials if you're a recruiter or weird, or just say hi. I had a lot of fun building this website, so if you have ideas about more things to put on it I'd love to hear them!
+Personal website.
 
 Tech stuff:
 -----------
