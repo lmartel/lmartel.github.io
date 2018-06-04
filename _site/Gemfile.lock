@@ -103,3 +103,9 @@ DEPENDENCIES
   rb-inotify
   rdiscount
   zurb-foundation
+
+RUBY VERSION
+   ruby 2.1.3p242
+
+BUNDLED WITH
+   1.16.2

@@ -1,0 +1,75 @@
+<h1>emacs-asana</h1>
+
+<p>Browse and act on your My Tasks list without leaving Emacs!</p>
+
+<p><img src="emacs-asana.png" alt="emacs-asana" /></p>
+
+<h2>Dependencies</h2>
+
+<p>You'll need these packages, available from melpa via <code>M-x package-install</code>:
+<code>
+helm
+exec-path-from-shell
+</code></p>
+
+<h2>Getting Started</h2>
+
+<p>Add this to your <code>.bash_profile</code> (or wherever you keep your environment):</p>
+
+<pre><code class="bash"># Get a Personal Access Token from the `apps' tab in your app.asana.com profile settings.
+export ASANA_TOKEN="&lt;my-asana-personal-access-token&gt;" 
+</code></pre>
+
+<p>Add this to your <code>init.el</code>:
+<code>elisp
+(global-asana-mode 1)
+;; or, if you prefer, use it in specific major modes:
+;; (add-hook 'org-mode-hook 'asana-mode)
+;; (add-hook 'prog-mode-hook 'asana-mode)
+;; (add-hook 'text-mode-hook 'asana-mode)
+</code></p>
+
+<h3>Configuration</h3>
+
+<p>[Optional] The default prefix for <code>asana-mode</code> commands is <code>C-c a</code>. To change it, add this to your <code>init.el</code>:
+<code>elisp
+(setq asana-keymap-prefix "C-c C-a") ; Or whatever you'd like to use as your prefix
+</code></p>
+
+<h3>Available commands</h3>
+
+<p>In the <code>asana-mode</code> minor mode, the following interactive commands are available:</p>
+
+<pre><code class="elisp">helm-asana [C-c a a]
+helm-asana-change-workspace [C-c a A]
+
+asana-create-task-quickly [C-c a c]
+asana-create-task [C-c a C]
+</code></pre>
+
+<p>The <code>helm-asana</code> task list provides these actions:
+<code>
+Select (view task details in buffer) [RET]
+Browse (open in Asana) [C-b]
+Move to section [C-:]
+Complete [C-RET]
+Delete [C-DEL]
+Move all marked tasks to section [M-:]
+Complete all marked tasks [M-RET]
+Delete all marked tasks [M-DEL]
+</code></p>
+
+<h2>Known issues</h2>
+
+<p>OSX El Capitan can break <code>exec-path-from-shell</code>, which corrupts your access token as it gets imported into Emacs. See https://github.com/purcell/exec-path-from-shell/issues/41 for more details. One available workaround is to disable OSX bash sessions with <code>touch ~/.bash_sessions_disable</code>.</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>Pagination for > 100 tasks</li>
+<li>Improve API request batching &amp; async around multi-select and assignee_status updates</li>
+<li>Improve error messages, for example around ASANA_TOKEN not found</li>
+<li>Improve/add docstrings</li>
+<li>Publish v1.0 as package</li>
+</ul>
+

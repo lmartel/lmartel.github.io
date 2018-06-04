@@ -77,7 +77,52 @@
         
         <div class="project-headers">
   
-  <div class="project-description" data-project="Gazebo" data-rank="1">
+  <div class="project-description" data-project="ToyBoat-Raft" data-rank="1">
+    <h2>
+      <a href="/projects/toyboat-raft/">
+        ToyBoat Raft
+      </a>
+      (<a href="//github.com/lmartel/ToyBoat-Raft">code</a>)
+    </h2>
+    <h4 class="project-date">
+      Summer 2015
+    </h4>
+    <h4 class="project-status">
+      finished
+    </h4>
+  </div>
+  
+  <div class="project-description" data-project="emacs-asana" data-rank="2">
+    <h2>
+      <a href="/projects/emacs-asana/">
+        emacs-asana
+      </a>
+      (<a href="//github.com/lmartel/emacs-asana">code</a>)
+    </h2>
+    <h4 class="project-date">
+      Spring 2017
+    </h4>
+    <h4 class="project-status">
+      functional but PRs welcome
+    </h4>
+  </div>
+  
+  <div class="project-description" data-project="pinboard-viewer" data-rank="3">
+    <h2>
+      <a href="/projects/pinboard-viewer/">
+        Pinboard Viewer
+      </a>
+      (<a href="//github.com/lmartel/pinboard-viewer">code</a>)
+    </h2>
+    <h4 class="project-date">
+      Summer 2015
+    </h4>
+    <h4 class="project-status">
+      finished
+    </h4>
+  </div>
+  
+  <div class="project-description" data-project="Gazebo" data-rank="4">
     <h2>
       <a href="/projects/gazebo/">
         Gazebo
@@ -92,7 +137,7 @@
     </h4>
   </div>
   
-  <div class="project-description" data-project="AxisAndAllies" data-rank="1">
+  <div class="project-description" data-project="AxisAndAllies" data-rank="5">
     <h2>
       <a href="/projects/axis-allies/">
         Axis&Allies
@@ -107,22 +152,7 @@
     </h4>
   </div>
   
-  <div class="project-description" data-project="EasyAuth" data-rank="2">
-    <h2>
-      <a href="/projects/easyauth/">
-        EasyAuth
-      </a>
-      (<a href="//github.com/lmartel/EasyAuth">code</a>)
-    </h2>
-    <h4 class="project-date">
-      Winter 2013
-    </h4>
-    <h4 class="project-status">
-      finished
-    </h4>
-  </div>
-  
-  <div class="project-description" data-project="TVTracker" data-rank="2">
+  <div class="project-description" data-project="TVTracker" data-rank="6">
     <h2>
       <a href="/projects/tvtracker/">
         TVTracker
@@ -137,7 +167,7 @@
     </h4>
   </div>
   
-  <div class="project-description" data-project="UrlShortener" data-rank="3">
+  <div class="project-description" data-project="UrlShortener" data-rank="7">
     <h2>
       <a href="/projects/2ez-url-shortener/">
         2EZ (Url Shortener)
@@ -152,7 +182,22 @@
     </h4>
   </div>
   
-  <div class="project-description" data-project="RTFA" data-rank="3">
+  <div class="project-description" data-project="EasyAuth" data-rank="8">
+    <h2>
+      <a href="/projects/easyauth/">
+        EasyAuth
+      </a>
+      (<a href="//github.com/lmartel/EasyAuth">code</a>)
+    </h2>
+    <h4 class="project-date">
+      Winter 2013
+    </h4>
+    <h4 class="project-status">
+      finished
+    </h4>
+  </div>
+  
+  <div class="project-description" data-project="RTFA" data-rank="9">
     <h2>
       <a href="/projects/rtfa/">
         RTFA
@@ -167,7 +212,7 @@
     </h4>
   </div>
   
-  <div class="project-description" data-project="PopOut" data-rank="4">
+  <div class="project-description" data-project="PopOut" data-rank="10">
     <h2>
       <a href="/projects/popout/">
         PopOut
@@ -186,15 +231,21 @@
 
 <ul class="bxslider">
   
+  <li><img src="/asset/image/toyboat-raft.png"></li>
+  
+  <li><img src="/asset/image/emacs-asana.png"></li>
+  
+  <li><img src="/asset/image/pinboard-viewer.png"></li>
+  
   <li><img src="/asset/image/gazebo.png"></li>
   
   <li><img src="/asset/image/axisandallies.png"></li>
   
-  <li><img src="/asset/image/easyauth.png"></li>
-  
   <li><img src="/asset/image/tvtracker.png"></li>
   
   <li><img src="/asset/image/urlshortener.png"></li>
+  
+  <li><img src="/asset/image/easyauth.png"></li>
   
   <li><img src="/asset/image/rtfa.png"></li>
   
@@ -204,7 +255,170 @@
 <hr>
 <div class="project-bodies">
   
-  <div class="project-description" data-project="Gazebo" data-rank="1">
+  <div class="project-description" data-project="ToyBoat Raft" data-rank="1">
+    <h1>ToyBoat - A Raft implementation</h1>
+
+<p><img src="raft-demo.png?raw=true" alt="ToyBoat Raft demo" /></p>
+
+<p><a href="https://raft.github.io/">Raft</a> is a distributed consensus algorithm. Consensus algorithms provide strong consistency guarantees to a cluster of servers, coordinating agreement on a value or safely replicating a state machine. Raft is mostly-equivalent to an earlier algorithm called Paxos, but was designed specifically to be easier to understand and leave less as an "exercise for the reader." You can read <a href="http://ramcloud.stanford.edu/raft.pdf">the original paper</a> for an excellent description of the algorithm and its many uses. You can also read <a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/paxos-simple.pdf">any Paxos paper</a> to see why an easier and more exaustively-specified algorithm was necessary.</p>
+
+<p>This repo contains my own implementation of Raft, in Haskell. I've implemented the full protocol, the two big pieces being log-entry propagation and leader election. Performance was not my focus, but it's fast enough to be IO-bound (and constrained by the configurable heartbeat/election timers) rather than CPU-bound. I also skipped space optimizations like log compaction, since I'm not using this in production anywhere and the log files take a long time to get huge.</p>
+
+<h2>Quick Start</h2>
+
+<p>Installing haskell is a huge pain for no reason, so if you don't have it I'd recommend just downloading the repo with precompiled binaries from the GitHub release page. If you just want to run the whole thing and see what's going on, here's how to do that:</p>
+
+<pre><code class="bash"># run the default cluster in three terminal tabs.
+# when a prompt pops up in one of them, type numbers in to submit log entries.
+./raft-osx 1
+./raft-osx 2
+./raft-osx 3
+# to see what's going on under the hood, open 3 more terminal tabs:
+tail -100f log/debug.1.log
+tail -100f log/debug.2.log
+tail -100f log/debug.3.log
+</code></pre>
+
+<p>It'll look like the picture above.</p>
+
+<h3>Running ToyBoat</h3>
+
+<p>Here's the full usage information:</p>
+
+<pre><code class="bash">./raft-osx SERVER_ID [COMMAND]   # commands = [log, test, leader, candidate, follower]
+./raft-linux SERVER_ID [COMMAND] # commands = [log, test, leader, candidate, follower]
+
+Examples:
+./raft-osx 1               # runs a Raft instance with ID=1
+./raft-osx 3 candidate     # runs a Raft instance with ID=3, forcing it into a particular starting role (candidate)
+./raft-osx 2 log           # dumps a nicely-formatted version of Server 2's write-ahead log, found in db/log.ID.json.
+./raft-osx 1 test          # runs the tests for Server 1. The test harness has been set up, but there aren't many tests.
+</code></pre>
+
+<p>The config file, <code>conf/config.json</code>, sets up a 3-node cluster to run locally. You can manually edit the JSON to change this, if you like.</p>
+
+<h3>Compiling ToyBoat</h3>
+
+<p>ToyBoat compiles and runs on OSX and Linux. The repo includes a Rakefile for simplifying the compilation commands as well as managing Docker if you're on OSX but want the Linux version.</p>
+
+<p>You need Ruby and Rake to build the project. Maybe someday I'll learn to enjoy writing Makefiles, but for now, google <code>installing RVM on [MY OS]</code>.</p>
+
+<p>You need Haskell too (obviously). Installing it is hard but Google-able. The project uses GHC version 7.10. Once you have Haskell, <code>cabal build</code> will install the project's dependencies.</p>
+
+<p>Finally, you're ready to actually compile the damn project. Assuming you're running OSX <code>rake compile</code> will compile for OSX, and <code>rake docker:build; rake docker:compile</code> will compile for Linux using Docker.</p>
+
+<h4>Using the Rakefile</h4>
+
+<p>Full list of Rakefile commands, for convenience:</p>
+
+<pre><code class="bash">rake                # default: compile for both OSX and Linux
+rake reset          # reset the state machine, clear the write-ahead logs
+rake log[ID]        # dump the server log for server #ID; alias for ./raft-OS ID log
+rake debug[ID]      # tail the log file for server #ID
+rake compile        # compile for OSX
+rake run[ID]        # run server #ID; alias for ./raft-OS ID
+
+rake docker:build   # build a linux image with Haskell and Raft's dependencies
+rake docker:compile # compile for Linux using docker
+rake docker:run[ID] # run server #ID on Linux inside docker
+</code></pre>
+
+<p>if you're messing around with Docker you'll probably have to edit the Rakefile; there are a few Docker commands that insist on absolute paths.</p>
+
+  </div>
+  
+  <div class="project-description" data-project="emacs-asana" data-rank="2">
+    <h1>emacs-asana</h1>
+
+<p>Browse and act on your My Tasks list without leaving Emacs!</p>
+
+<p><img src="emacs-asana.png" alt="emacs-asana" /></p>
+
+<h2>Dependencies</h2>
+
+<p>You'll need these packages, available from melpa via <code>M-x package-install</code>:
+<code>
+helm
+exec-path-from-shell
+</code></p>
+
+<h2>Getting Started</h2>
+
+<p>Add this to your <code>.bash_profile</code> (or wherever you keep your environment):</p>
+
+<pre><code class="bash"># Get a Personal Access Token from the `apps' tab in your app.asana.com profile settings.
+export ASANA_TOKEN="&lt;my-asana-personal-access-token&gt;" 
+</code></pre>
+
+<p>Add this to your <code>init.el</code>:
+<code>elisp
+(global-asana-mode 1)
+;; or, if you prefer, use it in specific major modes:
+;; (add-hook 'org-mode-hook 'asana-mode)
+;; (add-hook 'prog-mode-hook 'asana-mode)
+;; (add-hook 'text-mode-hook 'asana-mode)
+</code></p>
+
+<h3>Configuration</h3>
+
+<p>[Optional] The default prefix for <code>asana-mode</code> commands is <code>C-c a</code>. To change it, add this to your <code>init.el</code>:
+<code>elisp
+(setq asana-keymap-prefix "C-c C-a") ; Or whatever you'd like to use as your prefix
+</code></p>
+
+<h3>Available commands</h3>
+
+<p>In the <code>asana-mode</code> minor mode, the following interactive commands are available:</p>
+
+<pre><code class="elisp">helm-asana [C-c a a]
+helm-asana-change-workspace [C-c a A]
+
+asana-create-task-quickly [C-c a c]
+asana-create-task [C-c a C]
+</code></pre>
+
+<p>The <code>helm-asana</code> task list provides these actions:
+<code>
+Select (view task details in buffer) [RET]
+Browse (open in Asana) [C-b]
+Move to section [C-:]
+Complete [C-RET]
+Delete [C-DEL]
+Move all marked tasks to section [M-:]
+Complete all marked tasks [M-RET]
+Delete all marked tasks [M-DEL]
+</code></p>
+
+<h2>Known issues</h2>
+
+<p>OSX El Capitan can break <code>exec-path-from-shell</code>, which corrupts your access token as it gets imported into Emacs. See https://github.com/purcell/exec-path-from-shell/issues/41 for more details. One available workaround is to disable OSX bash sessions with <code>touch ~/.bash_sessions_disable</code>.</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>Pagination for > 100 tasks</li>
+<li>Improve API request batching &amp; async around multi-select and assignee_status updates</li>
+<li>Improve error messages, for example around ASANA_TOKEN not found</li>
+<li>Improve/add docstrings</li>
+<li>Publish v1.0 as package</li>
+</ul>
+
+
+  </div>
+  
+  <div class="project-description" data-project="Pinboard Viewer" data-rank="3">
+    <h1>Pinboard Viewer</h1>
+
+<p>Make Pinboard (http://pinboard.in) pins act more like browser bookmarks. Includes fuzzy search by pin title and url.
+Click the button or use a keyboard shortcut (suggested: Cmd-Shift-P or Ctrl-Shift-P) to bring up your Pinboard bookmarks. Search for tag names to filter, or search for a page title or URL to find a specific bookmark.</p>
+
+<p>The results update as you type. Once you've found your bookmark, press Enter or Tab to open it. Hold Cmd (Mac) or Ctrl (Windows) to open it in a new tab.</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/pinboard-viewer/odpfcajfjbfbgbglgmioehbenmdfnnii">Click here for screenshots and a download link.</a></p>
+
+  </div>
+  
+  <div class="project-description" data-project="Gazebo" data-rank="4">
     <h1>Gazebo</h1>
 
 <p>I built this while putting off choosing classes. <a href="http://gazebo.lpm.io">It helps you choose classes.</a></p>
@@ -222,7 +436,7 @@
 
   </div>
   
-  <div class="project-description" data-project="Axis&Allies" data-rank="1">
+  <div class="project-description" data-project="Axis&Allies" data-rank="5">
     <h1>Axis&amp;Allies</h1>
 
 <p>Axis &amp; Allies is a tabletop minatures game I played a lot as a kid. This is my HTML5 tribute to that game: it's animated, multiplayer, completely free, and (I think) a lot of fun, so give it a try! This is probably my largest solo project.</p>
@@ -317,29 +531,7 @@
 
   </div>
   
-  <div class="project-description" data-project="EasyAuth" data-rank="2">
-    <h1>EasyAuth</h1>
-
-<p>A little daemon that uses Twilio and Mailgun to intercept SMS messages and forward them to other phone numbers and email addresses. Use it to make Stanford 2Factor authentication less of a hassle!</p>
-
-<h2>Tech Stuff</h2>
-
-<ul>
-<li>Ruby with Sinatra</li>
-<li>Twilio API (10/10, would API again)</li>
-</ul>
-
-
-<h2>TODO</h2>
-
-<ul>
-<li>Integrate Google Authenticator or similar. This would shave a second or two off the code generation time.</li>
-</ul>
-
-
-  </div>
-  
-  <div class="project-description" data-project="TVTracker" data-rank="2">
+  <div class="project-description" data-project="TVTracker" data-rank="6">
     <h1>TVTracker</h1>
 
 <p>My first major, finished(ish) personal project. Pumped!</p>
@@ -371,7 +563,7 @@ full rails app from start to finish.</p>
 
   </div>
   
-  <div class="project-description" data-project="2EZ (Url Shortener)" data-rank="3">
+  <div class="project-description" data-project="2EZ (Url Shortener)" data-rank="7">
     <h1>Url Shortener</h1>
 
 <p>A simple link shortener hosted at <a href="http://s.lpm.io">my personal website</a>. This was a fun little project, inspired by my realization that <a href="http://lpm.io">lpm.io</a> is the same length as <a href="http://bit.ly">bit.ly</a>.</p>
@@ -390,7 +582,29 @@ full rails app from start to finish.</p>
 
   </div>
   
-  <div class="project-description" data-project="RTFA" data-rank="3">
+  <div class="project-description" data-project="EasyAuth" data-rank="8">
+    <h1>EasyAuth</h1>
+
+<p>A little daemon that uses Twilio and Mailgun to intercept SMS messages and forward them to other phone numbers and email addresses. Use it to make Stanford 2Factor authentication less of a hassle!</p>
+
+<h2>Tech Stuff</h2>
+
+<ul>
+<li>Ruby with Sinatra</li>
+<li>Twilio API (10/10, would API again)</li>
+</ul>
+
+
+<h2>TODO</h2>
+
+<ul>
+<li>Integrate Google Authenticator or similar. This would shave a second or two off the code generation time.</li>
+</ul>
+
+
+  </div>
+  
+  <div class="project-description" data-project="RTFA" data-rank="9">
     <h1>RTFA</h1>
 
 <p>(Read the effing article! Form your own opinions!)</p>
@@ -417,7 +631,7 @@ full rails app from start to finish.</p>
 
   </div>
   
-  <div class="project-description" data-project="PopOut" data-rank="4">
+  <div class="project-description" data-project="PopOut" data-rank="10">
     <h1>PopOut</h1>
 
 <p>A tiny chrome extension that adds a 'Pop out tabs to right' button to your menu bar. Click it to move your current tab and all tabs to the right to a new browser window.</p>

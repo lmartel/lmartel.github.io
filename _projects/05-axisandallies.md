@@ -4,7 +4,7 @@ url: http://game.lpm.io
 github: AxisAndAllies
 date: Summer 2013
 status: finished
-rank: 1
+rank: 5
 ---
 Axis&Allies
 ===========

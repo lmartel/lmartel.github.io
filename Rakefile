@@ -17,7 +17,7 @@ task :compile do
 end
 
 task :runserver do
-    puts `jekyll serve --watch`
+    puts `jekyll serve --watch` # default port: 4000
 end
 
 task :projects do
@@ -31,7 +31,7 @@ task :projects do
                 break if delimiters == 2
             end
 
-            project_name = filename.chomp('.md').sub(/.*(-|\/)/, '')
+            project_name = File.basename(filename).chomp('.md').sub(/^\d+-/, '')
             puts "Updating #{project_name}..."
             open(raw_github_url project_name) do |readme_file|
                 readme_file.each_line do |line|

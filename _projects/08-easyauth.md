@@ -4,7 +4,7 @@ url: http://auth.lpm.io
 github: EasyAuth
 date: Winter 2013
 status: finished
-rank: 2
+rank: 8
 ---
 EasyAuth
 ========
