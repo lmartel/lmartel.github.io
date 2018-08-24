@@ -77,140 +77,6 @@
         
         
 <h2 class="blog-heading">
-<a href="/drafts/negotiate/">
-Negotiating Junior Developer Salaries
-</a>
-</h2>
-
-
-<h5 class="blog-byline">
-Leo
-</h5>
-
-
-<p><br></p>
-
-<h6 class="blog-date">
-
-</h6>
-
-
-<h3>Setup</h3>
-
-<p>Intro P: Negotiating is important because reasons.</p>
-
-<p>Due to the huge information asymmetry inherent in negotiating salaries, many negotiations happen in two phases. First, the company pulls some Total Bullshit and hopes you fall for it. Second, the company gives you a genuinely reasonable starting offer, and the negotiation proceeds from there.</p>
-
-<h4>Phase One: In Which The Company Tries To Swindle You</h4>
-
-<p>If the company opts for Total Bullshit, it usually takes one of the two forms. They ask you to name a number first, hoping you get nervous and low-ball yourself; or they purposely offer you a below-market salary, hoping you get excited and accept anyway. Surviving this phase is completely mechanical! In fact, here's a flow chart:</p>
-
-<div id="negotiation-chart1"></div>
-
-
-<p><br></p>
-
-<p>No matter how much you like or trust the company or your recruiter, run their initial offer through this script. You'll be surprised how often these dirty tactics are used, even by otherwise-great companies. It's just how the proverbial game is played.</p>
-
-<h4>Phase Two: In Which You Actually Negotiate</h4>
-
-<p>You've passed their naiveté test. However, whether you're talking with one company or ten, it's worth it to keep going. After all, worst-case you just stay where you are!</p>
-
-<p>From here, if you have multiple offers you should use different tactics based on where each company stands. Divide your offers into tiers based on whatever criteria <em>aside from salary</em> actually matter to you. If you don't know what your criteria are, you should figure that out before continuing. Why does this matter? The less invested you are, the more aggressively you can negotiate.<sup id="ref1"><a href="#note1">1</a></sup> In particular: threatening to walk away can be very effective, but you should only do so if you mean it.</p>
-
-<ul>
-<li>Tier A: you want to work for THIS company, specifically. This tier should have one company in it, or be empty.</li>
-<li>Tier B: you would happily work for this company, but it's not your clear favorite. If any Tier B company offered you meaningfully higher compensation than all the others, you'd work for that one.</li>
-<li>Tier C: you wouldn't realistically work for this company.</li>
-<li>Finally, let's call your highest offer [Tier]+ and the rest [Tier]-.</li>
-</ul>
-
-
-<p>Here's how I would finish up. The primary goal here is to just make sure your favorite company matches your best offer; if you can get someone to overshoot, even better.</p>
-
-<div id="negotiation-chart2"></div>
-
-
-<p><br></p>
-
-<p>Once all of your offers reach a steady state, you're all done. Now you just have to decide!</p>
-
-<p><strong id="note1">[1]</strong>  Don't shy away from negotiating aggressively. The person you're negotiating with does this for a living, and I promise that they use more sneaky tricks than you do. But it's not personal on their side, it's just business--and that's how it should be for you. <a href="#ref1">&#8617;</a></p>
-
-<script>
-var d1 = `st=>start: Verbal offer
-verb=>operation: Refuse to give numbers first, no matter what.
-When in doubt just say you need to see the written offer terms for context.
-You can also follow patio11's excellent script, linked here.:>http://www.kalzumeus.com/2012/01/23/salary-negotiation/
-initOffer=>inputoutput: That's an interesting number. I'm excited about [this company] for
-[short list of specific reasons], but I have a more competitive offer
-from [other specific company]. Do you have any flexibility on that number?
-isUp=>condition: Did they go up without
-asking questions?
-isBest=>condition: Is this your
-highest offer?
-done=>end: Done. Onward!
-
-st->verb->initOffer(bottom)->isUp
-isUp(yes, right)->isBest
-isUp(no)->done
-isBest(yes, bottom)->done
-isBest(no, right)->initOffer
-`;
-
-var d2 = `st=>start: Written offer from Phase One
-prev=>condition: Did Phase One end with them asking for
-the details of your other offer?|previous
-tryAgain=>operation: Ask again, providing
-explicit details about
-your other, better offer.
-isBest=>condition: Is this your
-highest offer?
-bend=>end: Deep
-breath!
-numbers=>subroutine: [[Tier A+]] Refuse to provide numbers, blaming an NDA.
-Whether they go up or not, you're done.
-[[Tier A-]] Give honest numbers, providing proof if they ask.
-If they go up, you're done. If not, why did they even ask?? Consult a better flowchart.
-[[Tier B]] Refuse to provide numbers, blaming an NDA.
-If they don't budge, walk away--but slowly, giving them a chance to reconsider.
-[[Tier C]] Give fake but realistic numbers, fudging your best offer by 5-10%.
-If they ask for proof, refuse, blaming an NDA. If they insist, walk away.
-doneBest=>end: You're mostly done.
-Try asking for smaller stuff,
-like vacation days.
-done=>end: [[Tier A]] You're mostly done.
-Try asking for smaller stuff,
-like vacation days.
-[[Tier A-]] Ask again, but be more
-specific about your better offer.
-
-st->prev
-prev(yes)->bend->numbers
-prev(no, right)->isBest
-isBest(yes, right)->doneBest
-isBest(no)->tryAgain->doneBest
-`;
-
-window.onload = function(){
-flowchart.parse(d1).drawSVG("negotiation-chart1");
-flowchart.parse(d2).drawSVG("negotiation-chart2", {
-    'flowstate': {
-    'previous': { 'no-text': 'no, just a hard "no"' },
-    'long': { 'line-length': 350 },
-    'short': { 'line-length': 50 }
-    }
-});
-};
-</script>
-
-
-
-<br>
-<hr>
-
-
-<h2 class="blog-heading">
 <a href="/drafts/haskell/">
 Some Initial Thoughts On Haskell
 </a>
@@ -266,6 +132,7 @@ Leo
 
 
 
+        
       </div>
       <div class='content-background'></div>
     </div>
