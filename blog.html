@@ -5,6 +5,11 @@ title: BLOG
 
 {% for post in site.posts limit:10 %}
 {{ post.content }}
+{% if post.comments %}
+<p>
+  <a href="http:{{ site.url }}{{ post.url }}#disqus_thread">Post a comment</a>
+</p>
+{% endif %}
 {% unless forloop.last %}
 <br>
 <hr>
